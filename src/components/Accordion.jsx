@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react'
 
 const videos = [
-  "/video_02.mp4",
-  "/video_01.mp4"
+  `${process.env.PUBLIC_URL}/video_02.mp4`,
+  `${process.env.PUBLIC_URL}/video_01.mp4`
 ]
+
 
 const Accordion = () => {
   const [current, setCurrent] = useState(0)
