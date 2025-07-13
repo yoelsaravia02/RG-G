@@ -5,12 +5,11 @@ const videos = [
   `${process.env.PUBLIC_URL}/video_01.mp4`
 ]
 
-
-const Accordion = () => {
+const Accordion = ({ setFading }) => {
   const [current, setCurrent] = useState(0)
-  const [fading, setFading] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   const [firstLoad, setFirstLoad] = useState(true)
+  const [localFading, setLocalFading] = useState(false)
   const containerRef = useRef(null)
   const videoRef = useRef(null)
 
@@ -28,16 +27,22 @@ const Accordion = () => {
   useEffect(() => {
     if (firstLoad) {
       setFirstLoad(false)
+      setLocalFading(false)
       setFading(false)
     } else {
+      setLocalFading(true)
       setFading(true)
-      const timeout = setTimeout(() => setFading(false), 700)
+      const timeout = setTimeout(() => {
+        setLocalFading(false)
+        setFading(false)
+      }, 700)
       return () => clearTimeout(timeout)
     }
-  }, [current])
+  }, [current, firstLoad, setFading])
 
   const handleEnded = () => {
     if (!isVisible) return
+    setLocalFading(true)
     setFading(true)
     setTimeout(() => {
       setCurrent((prev) => (prev + 1) % videos.length)
@@ -46,6 +51,7 @@ const Accordion = () => {
 
   const handleButtonClick = (idx) => {
     if (idx === current) return
+    setLocalFading(true)
     setFading(true)
     setTimeout(() => {
       setCurrent(idx)
@@ -53,7 +59,7 @@ const Accordion = () => {
   }
 
   // Fade classes
-  const fadeClasses = fading
+  const fadeClasses = localFading
     ? 'opacity-0 transition-opacity duration-700'
     : 'opacity-100 transition-opacity duration-700'
 
@@ -62,7 +68,7 @@ const Accordion = () => {
 
   return (
     <div className="relative h-full w-full" ref={containerRef}>
-      <div className="relative h-full overflow-hidden rounded-lg flex items-center justify-center">
+      <div className="relative h-full overflow-hidden flex items-center justify-center">
         <video
           ref={videoRef}
           src={videos[current]}
@@ -86,7 +92,7 @@ const Accordion = () => {
             aria-current={current === idx}
             aria-label={`Slide ${idx + 1}`}
             onClick={() => handleButtonClick(idx)}
-            disabled={fading}
+            disabled={localFading}
           />
         ))}
       </div>

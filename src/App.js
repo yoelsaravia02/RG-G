@@ -1,14 +1,15 @@
+import React, { useState } from "react";
 import NavBar from "./components/NavBar.jsx";
-import Accordion from "./components/Accordion.jsx";
+import Accordion from "./components/Corousel.jsx";
 
 function App() {
+  const [fading, setFading] = useState(false);
+
   return (
     <div className="h-screen flex flex-col">
-      <div className="h-16 md:h-20"> {/* Alto fijo para el NavBar */}
-        <NavBar />
-      </div>
+      <NavBar fading={fading} />
       <div className="flex-1">
-        <Accordion />
+        <Accordion setFading={setFading} />
       </div>
     </div>
   );
