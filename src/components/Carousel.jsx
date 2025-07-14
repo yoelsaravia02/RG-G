@@ -5,11 +5,12 @@ const videos = [
   `${process.env.PUBLIC_URL}/video_01.mp4`
 ]
 
-const Accordion = ({ setFading }) => {
+const Carousel = ({ setFading }) => {
   const [current, setCurrent] = useState(0)
   const [isVisible, setIsVisible] = useState(true)
   const [firstLoad, setFirstLoad] = useState(true)
   const [localFading, setLocalFading] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(true) // Nuevo estado
   const containerRef = useRef(null)
   const videoRef = useRef(null)
 
@@ -39,6 +40,17 @@ const Accordion = ({ setFading }) => {
       return () => clearTimeout(timeout)
     }
   }, [current, firstLoad, setFading])
+
+  // Controla play/pause del video
+  useEffect(() => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.play()
+      } else {
+        videoRef.current.pause()
+      }
+    }
+  }, [isPlaying, current])
 
   const handleEnded = () => {
     if (!isVisible) return
@@ -82,8 +94,8 @@ const Accordion = ({ setFading }) => {
           Tu navegador no soporta el video.
         </video>
       </div>
-      {/* Indicadores de slide */}
-      <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3">
+      {/* Indicadores de slide y botón de play/pause */}
+      <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 items-center">
         {videos.map((_, idx) => (
           <button
             key={idx}
@@ -95,9 +107,28 @@ const Accordion = ({ setFading }) => {
             disabled={localFading}
           />
         ))}
+        {/* Botón play/pause */}
+        <button
+          type="button"
+          className="ml-4 w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-80 hover:bg-opacity-100 shadow"
+          onClick={() => setIsPlaying((p) => !p)}
+        >
+          {isPlaying ? (
+            // Icono de pausa
+            <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <rect x="6" y="4" width="4" height="16" rx="1" fill="currentColor"/>
+              <rect x="14" y="4" width="4" height="16" rx="1" fill="currentColor"/>
+            </svg>
+          ) : (
+            // Icono de play
+            <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <polygon points="6,4 20,12 6,20 6,4" fill="currentColor"/>
+            </svg>
+          )}
+        </button>
       </div>
     </div>
   )
 }
 
-export default Accordion
+export default Carousel
