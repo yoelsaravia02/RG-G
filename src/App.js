@@ -3,6 +3,9 @@ import NavBar from "./components/NavBar.jsx";
 import Carousel from "./components/Carousel.jsx";
 import ShapeDivider from "./components/ShapeDivider.jsx";
 import PracticeAreas from "./components/PracticeAreas.jsx";
+import Firma from "./components/Firma.jsx";
+import Abogados from "./components/Abogados.jsx";
+import Contacto from "./components/Contacto.jsx";
 
 function App() {
   const [fading, setFading] = useState(false);
@@ -16,7 +19,10 @@ function App() {
           <ShapeDivider />
         </div>
       </div>
+      <Firma />
       <PracticeAreas/>
+      <Abogados />
+      <Contacto/>
     </div>
 
 

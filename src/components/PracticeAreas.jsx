@@ -39,7 +39,7 @@ const PracticeAreas = () => {
     <section className="bg-white my-8 py-8 px-4">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-blue-900 mb-4">Nuestras Áreas de Práctica</h2>
-        <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-gray-600 mb-12 text-base sm:text-lg md:text-xl">
           Brindamos asesoramiento legal experto en múltiples áreas de práctica para atender todas sus necesidades legales con la más alta calidad profesional.
         </p>
 

@@ -93,6 +93,26 @@ const Carousel = ({ setFading }) => {
         >
           Tu navegador no soporta el video.
         </video>
+
+        <div
+          id="textoPrincipal"
+          className="absolute z-20 max-w-xl px-4 py-3 text-white"
+          style={{
+            top: '15%',
+            left: '5%',
+            transform: 'translate(0, 0)',
+            textShadow: '0 0 10px rgba(0,0,0,0.7)'
+          }}
+        >
+          <h2 className="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-2">
+            Tu texto principal aquí
+          </h2>
+          <h2 className="text-xl md:text-xl lg:text-2xl font-light">
+            Tu texto secundario aquí
+          </h2>
+        </div>
+
+
       </div>
       {/* Indicadores de slide y botón de play/pause */}
       <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 items-center">
@@ -116,13 +136,13 @@ const Carousel = ({ setFading }) => {
           {isPlaying ? (
             // Icono de pausa
             <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <rect x="6" y="4" width="4" height="16" rx="1" fill="currentColor"/>
-              <rect x="14" y="4" width="4" height="16" rx="1" fill="currentColor"/>
+              <rect x="6" y="4" width="4" height="16" rx="1" fill="currentColor" />
+              <rect x="14" y="4" width="4" height="16" rx="1" fill="currentColor" />
             </svg>
           ) : (
             // Icono de play
             <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <polygon points="6,4 20,12 6,20 6,4" fill="currentColor"/>
+              <polygon points="6,4 20,12 6,20 6,4" fill="currentColor" />
             </svg>
           )}
         </button>
