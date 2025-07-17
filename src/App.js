@@ -1,31 +1,25 @@
 import React, { useState } from "react";
 import NavBar from "./components/NavBar.jsx";
-import Carousel from "./components/Carousel.jsx";
-import ShapeDivider from "./components/ShapeDivider.jsx";
+import HomePage from "./pages/HomePage.jsx";
 import PracticeAreas from "./components/PracticeAreas.jsx";
-import Firma from "./components/Firma.jsx";
 import Abogados from "./components/Abogados.jsx";
 import Contacto from "./components/Contacto.jsx";
+import Footer from "./components/Footer.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const [fading, setFading] = useState(false);
 
   return (
     <div>
-      <div className="h-screen flex flex-col">
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <NavBar fading={fading} />
-        <div className="flex-1 relative">
-          <Carousel setFading={setFading} />
-          <ShapeDivider />
-        </div>
-      </div>
-      <Firma />
-      <PracticeAreas/>
-      <Abogados />
-      <Contacto/>
+        <Routes>
+          <Route path="/inicio" element={<HomePage setFading={setFading} />}></Route>
+        </Routes>
+        <Footer/>
+      </BrowserRouter>
     </div>
-
-
   );
 }
 
