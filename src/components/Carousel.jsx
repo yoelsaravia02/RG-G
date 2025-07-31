@@ -8,13 +8,13 @@ const videos = [
 const Carousel = ({ setFading }) => {
   const [current, setCurrent] = useState(0)
   const [isVisible, setIsVisible] = useState(true)
-  const [firstLoad, setFirstLoad] = useState(true)
+  const [hasInteracted, setHasInteracted] = useState(false)
   const [localFading, setLocalFading] = useState(false)
-  const [isPlaying, setIsPlaying] = useState(true) // Nuevo estado
+  const [isPlaying, setIsPlayaing] = useState(true)
   const containerRef = useRef(null)
   const videoRef = useRef(null)
 
-  // Detecta si el div está visible en pantalla
+  // Detectar visibilidad
   useEffect(() => {
     const observer = new window.IntersectionObserver(
       ([entry]) => setIsVisible(entry.isIntersecting),
@@ -24,36 +24,29 @@ const Carousel = ({ setFading }) => {
     return () => observer.disconnect()
   }, [])
 
-  // Fade-in al cambiar de video, pero no en la primera carga
+  // Fade solo después de interacción
   useEffect(() => {
-    if (firstLoad) {
-      setFirstLoad(false)
+    if (!hasInteracted) return
+    setLocalFading(true)
+    setFading(true)
+    const timeout = setTimeout(() => {
       setLocalFading(false)
       setFading(false)
-    } else {
-      setLocalFading(true)
-      setFading(true)
-      const timeout = setTimeout(() => {
-        setLocalFading(false)
-        setFading(false)
-      }, 700)
-      return () => clearTimeout(timeout)
-    }
-  }, [current, firstLoad, setFading])
+    }, 700)
+    return () => clearTimeout(timeout)
+  }, [current, hasInteracted, setFading])
 
-  // Controla play/pause del video
+  // Control de reproducción
   useEffect(() => {
     if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.play()
-      } else {
-        videoRef.current.pause()
-      }
+      if (isPlaying) videoRef.current.play()
+      else videoRef.current.pause()
     }
   }, [isPlaying, current])
 
   const handleEnded = () => {
     if (!isVisible) return
+    setHasInteracted(true)
     setLocalFading(true)
     setFading(true)
     setTimeout(() => {
@@ -63,6 +56,7 @@ const Carousel = ({ setFading }) => {
 
   const handleButtonClick = (idx) => {
     if (idx === current) return
+    setHasInteracted(true)
     setLocalFading(true)
     setFading(true)
     setTimeout(() => {
@@ -70,13 +64,13 @@ const Carousel = ({ setFading }) => {
     }, 700)
   }
 
-  // Fade classes
+  // Clases fade después de interacción
   const fadeClasses = localFading
     ? 'opacity-0 transition-opacity duration-700'
     : 'opacity-100 transition-opacity duration-700'
 
-  // Si es la primera carga, no aplicar fade
-  const videoFadeClass = firstLoad ? '' : fadeClasses
+  const videoClass =
+    hasInteracted ? `block w-full h-full object-cover absolute top-0 left-0 ${fadeClasses}` : 'block w-full h-full object-cover absolute top-0 left-0'
 
   return (
     <div className="relative h-full w-full" ref={containerRef}>
@@ -84,7 +78,7 @@ const Carousel = ({ setFading }) => {
         <video
           ref={videoRef}
           src={videos[current]}
-          className={`block w-full h-full object-cover absolute top-0 left-0 ${videoFadeClass}`}
+          className={videoClass}
           autoPlay
           loop={false}
           muted
@@ -111,41 +105,6 @@ const Carousel = ({ setFading }) => {
             Tu texto secundario aquí
           </h2>
         </div>
-
-
-      </div>
-      {/* Indicadores de slide y botón de play/pause */}
-      <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 items-center">
-        {videos.map((_, idx) => (
-          <button
-            key={idx}
-            type="button"
-            className={`w-3 h-3 rounded-full ${current === idx ? 'bg-gray-400' : 'bg-gray-300'}`}
-            aria-current={current === idx}
-            aria-label={`Slide ${idx + 1}`}
-            onClick={() => handleButtonClick(idx)}
-            disabled={localFading}
-          />
-        ))}
-        {/* Botón play/pause */}
-        <button
-          type="button"
-          className="ml-4 w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-80 hover:bg-opacity-100 shadow"
-          onClick={() => setIsPlaying((p) => !p)}
-        >
-          {isPlaying ? (
-            // Icono de pausa
-            <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <rect x="6" y="4" width="4" height="16" rx="1" fill="currentColor" />
-              <rect x="14" y="4" width="4" height="16" rx="1" fill="currentColor" />
-            </svg>
-          ) : (
-            // Icono de play
-            <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <polygon points="6,4 20,12 6,20 6,4" fill="currentColor" />
-            </svg>
-          )}
-        </button>
       </div>
     </div>
   )

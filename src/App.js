@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <NavBar fading={fading} />
         <Routes>
-          <Route path="/inicio" element={<HomePage setFading={setFading} />}></Route>
+          <Route path="/" element={<HomePage setFading={setFading} />}></Route>
         </Routes>
         <Footer/>
       </BrowserRouter>
