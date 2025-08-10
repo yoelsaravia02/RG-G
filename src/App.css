@@ -1,0 +1,13 @@
+/* Clases para aplicar cada fuente individualmente */
+.font-goudy {
+  font-family: 'Sorts Mill Goudy', serif;
+}
+
+.font-bona {
+  font-family: 'Bona Nova SC', serif;
+}
+
+.font-mona {
+  font-family: "Mona Sans", serif;
+  font-weight: 200;
+}
