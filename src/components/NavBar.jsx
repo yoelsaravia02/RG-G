@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = ({ carouselRef }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isTransparent, setIsTransparent] = useState(true);
+  const navigate = useNavigate();
 
   const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const closeMenu = () => setIsMobileMenuOpen(false);
@@ -52,16 +54,89 @@ const NavBar = ({ carouselRef }) => {
       <div className="max-w-screen-xl mx-auto flex flex-col items-center p-4">
         <div className="w-full flex justify-between items-center mb-2">
           {/* Logo */}
-          <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <a
+            href="#"
+            className="flex items-center space-x-3 rtl:space-x-reverse"
+            onClick={e => {
+              e.preventDefault();
+              navigate("/");
+              closeMenu();
+            }}
+          >
             <img src={`${process.env.PUBLIC_URL}/${isTransparent ? 'logoSantinoBlanco.png' : 'logoSantinoNegro.png'}`} className="h-10" style={{ height: '48px', width: 'auto' }} alt="Logo Santino" />
           </a>
           {/* Menú principal */}
-          <ul className={`hidden md:flex space-x-8 font-medium ${isTransparent ? 'text-white' : 'text-black'}`}> 
-            <li><a href="#" className="font-mona transition-transform duration-200" style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }} onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'} onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}>Inicio</a></li>
-            <li><a href="#" className="font-mona transition-transform duration-200" style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }} onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'} onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}>La Firma</a></li>
-            <li><a href="#" className="font-mona transition-transform duration-200" style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }} onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'} onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}>Contacto</a></li>
-            <li><a href="#" className="font-mona transition-transform duration-200" style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }} onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'} onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}>Áreas de práctica</a></li>
-            <li><a href="#" className="font-mona transition-transform duration-200" style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }} onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'} onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}>Profesionales</a></li>
+          <ul className={`hidden md:flex space-x-8 font-medium ${isTransparent ? 'text-white' : 'text-black'}`}>
+            <li>
+              <a
+                href="#"
+                className="font-mona transition-transform duration-200"
+                style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
+                onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'
+                }
+                onClick={e => {
+                  e.preventDefault();
+                  navigate("/");
+                }}
+              >Inicio</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="font-mona transition-transform duration-200"
+                style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
+                onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'
+                }
+                onClick={e => {
+                  e.preventDefault();
+                  navigate("/firma");
+                }}
+              >Quienes Somos</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="font-mona transition-transform duration-200"
+                style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
+                onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'
+                }
+                onClick={e => {
+                  e.preventDefault();
+                  navigate("/areas");
+                }}
+              >Áreas de práctica</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="font-mona transition-transform duration-200"
+                style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
+                onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'
+                }
+                onClick={e => {
+                  e.preventDefault();
+                  navigate("/profesionales");
+                }}
+              >Profesionales</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="font-mona transition-transform duration-200"
+                style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
+                onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'
+                }
+                onClick={e => {
+                  e.preventDefault();
+                  navigate("/contacto");
+                }}
+              >Contacto</a>
+            </li>
           </ul>
           {/* Botón hamburguesa en móvil */}
           <button
@@ -103,11 +178,51 @@ const NavBar = ({ carouselRef }) => {
           </button>
         </div>
         <div className="p-6 space-y-4 font-medium text-black">
-          <a href="#" onClick={closeMenu} className="block hover:text-blue-700">Inicio</a>
-          <a href="#" onClick={closeMenu} className="block hover:text-blue-700">La Firma</a>
-          <a href="#" onClick={closeMenu} className="block hover:text-blue-700">Áreas de práctica</a>
-          <a href="#" onClick={closeMenu} className="block hover:text-blue-700">Profesionales</a>
-          <a href="#" onClick={closeMenu} className="block hover:text-blue-700">Contacto</a>
+          <a
+            href="#"
+            onClick={e => {
+              e.preventDefault();
+              navigate("/");
+              closeMenu();
+            }}
+            className="block hover:text-blue-700"
+          >Inicio</a>
+          <a
+            href="#"
+            onClick={e => {
+              e.preventDefault();
+              navigate("/firma");
+              closeMenu();
+            }}
+            className="block hover:text-blue-700"
+          >Quienes Somos</a>
+          <a
+            href="#"
+            onClick={e => {
+              e.preventDefault();
+              navigate("/areas");
+              closeMenu();
+            }}
+            className="block hover:text-blue-700"
+          >Áreas de práctica</a>
+          <a
+            href="#"
+            onClick={e => {
+              e.preventDefault();
+              navigate("/profesionales");
+              closeMenu();
+            }}
+            className="block hover:text-blue-700"
+          >Profesionales</a>
+          <a
+            href="#"
+            onClick={e => {
+              e.preventDefault();
+              navigate("/contacto");
+              closeMenu();
+            }}
+            className="block hover:text-blue-700"
+          >Contacto</a>
         </div>
       </div>
     </nav>

@@ -1,7 +1,5 @@
-import React from "react";
 import Carousel from "../components/Carousel.jsx";
 import ShapeDivider from "../components/ShapeDivider.jsx";
-// import Firma from "../components/Firma.jsx";
 import Novedades from "../components/Novedades.jsx";
 
 const HomePage = ({ setFading }) => (
