@@ -1,49 +1,62 @@
-
 import React from "react";
-import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
+// import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
-  <footer className="bg-black text-white pt-10" style={{ background: '#000' }}>
+    <footer className="bg-black text-white pt-10" style={{ background: "#000" }}>
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center md:grid md:grid-cols-3 md:gap-10 pb-10">
         {/* Columna izquierda: Logo y redes */}
-        <div className="flex flex-col items-center gap-4 mb-8 md:mb-0">
-          <img src={`${process.env.PUBLIC_URL}/logoFooter.jpg`} alt="Logo Footer" className="mb-4" style={{ width: '160px', height: 'auto' }} />
+        <div className="flex flex-col items-center gap-4 mb-6 md:mb-0">
+          <img
+            src={`${process.env.PUBLIC_URL}/logoFooter.png`}
+            alt="Logo Footer"
+            className="mb-4"
+            style={{ width: "280px", height: "auto" }}
+          />
           <div className="flex items-center gap-4 mt-2 text-white text-xl justify-center">
-            <a href="mailto:info@rg-estudio.com" aria-label="Correo">
+            {/* <a href="mailto:info@rg-estudio.com" aria-label="Correo">
               <FaEnvelope />
             </a>
-            <a href="https://wa.me/5493510000000" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
+            <a
+              href="https://wa.me/5493510000000"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Whatsapp"
+            >
               <FaWhatsapp />
-            </a>
+            </a> */}
           </div>
         </div>
 
-        {/* Columna central */}
-        <div className="text-sm flex flex-col items-center mb-8 md:mb-0 font-mona justify-start" style={{paddingBottom: '70px'}}>
-          <ul className="space-y-2 text-center">
-            <li>Publicaciones</li>
-            <li>Equipo</li>
-            <li>Gestión de riesgos</li>
-            <li>Contacto</li>
+        {/* Columna central y derecha unidas en mobile */}
+        <div className="w-full md:w-auto">
+          <ul className="space-y-2 text-center flex flex-col items-center md:block font-mona text-md">
+            <li>Inicio</li>
+            <li>Quienes Somos</li>
+            <li>Áreas de práctica</li>
+            {/* Solo muestra estos en mobile */}
+            <li className="md:hidden">Profesionales</li>
+            <li className="md:hidden">Contacto</li>
           </ul>
         </div>
 
-        {/* Columna derecha */}
-        <div className="text-sm flex flex-col items-center font-mona justify-start" style={{paddingBottom: '70px'}}>
+        {/* Columna derecha solo en desktop */}
+        <div className="text-md flex-col items-center font-mona hidden md:flex">
           <ul className="space-y-2 text-center">
-            <li>Áreas de práctica</li>
-            <li>Trabajar en R & G</li>
-            <li>Equipo</li>
-            <li>Aviso Legal</li>
+            <li>Profesionales</li>
+            <li>Contacto</li>
           </ul>
         </div>
       </div>
 
       {/* Sección inferior */}
-      <div className="bg-black text-xs text-center py-4 px-4 relative">
+      <div
+        className="bg-black text-center py-4 px-4 relative font-mona"
+        style={{ fontSize: "0.85rem" }}
+      >
         <p className="text-white">
-          ESTUDIO DE ABOGADOS RIGHETTI Y GANDIONE. Todos los derechos reservados. Prohibida su reproducción total o parcial.
+          BUREAU LEGAL RIGHETTI GANDIONE & GROUNDS. Todos los derechos reservados. Prohibida su
+          reproducción total o parcial.
         </p>
       </div>
     </footer>

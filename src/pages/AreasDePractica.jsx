@@ -22,7 +22,7 @@ const areas = [
   { titulo: "Planificación patrimonial y Family Office", 
     descripcion: "Diseño de estructuras jurídicas orientadas a la protección, administración y transmisión de bienes familiares o empresariales. Implementación de vehículos jurídicos como fideicomisos, donaciones estructuradas, acuerdos sucesorios y otros instrumentos conforme al Código Civil y Comercial de la Nación." },
   { titulo: "Derecho Civil y Comercial - Contratación", 
-    descripcion: "Redacción, análisis y negociación de contratos civiles y comerciales. Intervención in la ejecución, interpretación y resolución de obligaciones contractuales. Representación en conflictos derivados de relaciones jurídicas patrimoniales." },
+    descripcion: "Redacción, análisis y negociación de contratos civiles y comerciales. Intervención in la ejecución, interpretación y resolución de obligaciones contractuales. Representación in conflictos derivados de relaciones jurídicas patrimoniales." },
   { titulo: "Derecho de Seguros", 
     descripcion: "Asistencia jurídica en materia de cobertura, reclamos por siniestros, litigios con aseguradoras, redacción de condiciones contractuales y análisis de responsabilidad." },
   { titulo: "Propiedad Intelectual", 
@@ -47,30 +47,62 @@ const col1 = areas.slice(0, mitad);
 const col2 = areas.slice(mitad);
 
 export default function AreasDePractica() {
-  const [openIndexCol1, setOpenIndexCol1] = useState(null);
-  const [openIndexCol2, setOpenIndexCol2] = useState(null);
+  // Ahora cada columna tiene un array de índices abiertos
+  const [openIndexesCol1, setOpenIndexesCol1] = useState([]);
+  const [openIndexesCol2, setOpenIndexesCol2] = useState([]);
 
   const toggleArea = (index, col) => {
     if (col === 1) {
-      setOpenIndexCol1(openIndexCol1 === index ? null : index);
+      setOpenIndexesCol1(prev =>
+        prev.includes(index)
+          ? prev.filter(i => i !== index)
+          : [...prev, index]
+      );
     } else {
-      setOpenIndexCol2(openIndexCol2 === index ? null : index);
+      setOpenIndexesCol2(prev =>
+        prev.includes(index)
+          ? prev.filter(i => i !== index)
+          : [...prev, index]
+      );
     }
   };
-
-  const renderColumn = (items, openIndex, col) => (
+  
+  const renderColumn = (items, openIndexes, col) => (
     <div className="flex flex-col gap-4">
       {items.map((area, index) => {
-        const isOpen = openIndex === index;
+        const isOpen = openIndexes.includes(index);
         return (
-          <div key={index} className="border border-gray-300 rounded overflow-hidden">
+          <div key={index} className="border border-gray-300 overflow-hidden">
             <button
               onClick={() => toggleArea(index, col)}
-              className={`w-full text-left px-4 py-3 flex justify-between items-center transition-colors duration-300
-                ${isOpen ? "bg-white text-black" : "bg-gray-300 text-black"}`}
+              className={`w-full text-left px-4 py-3 flex justify-between items-center transition-colors duration-300`}
+              style={{
+                backgroundColor: isOpen ? "#fff" : "rgb(196,196,197)",
+                color: "black",
+                border: "none"
+              }}
             >
               <span className="font-semibold">{area.titulo}</span>
-              <span>{isOpen ? "▲" : "▼"}</span>
+              <span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style={{
+                    transform: isOpen ? "rotate(180deg)" : "none",
+                    transition: "transform 0.3s"
+                  }}
+                >
+                  <polyline
+                    points="6 9 12 15 18 9"
+                    fill="none"
+                    stroke="#222"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
             </button>
             <div
               style={{
@@ -80,7 +112,10 @@ export default function AreasDePractica() {
                 background: isOpen ? "#fff" : "transparent"
               }}
             >
-              <div className="p-4 text-gray-700 text-sm">
+              <div
+                className="p-4 text-gray-700 text-sm font-semibold"
+                style={{ fontSize: "0.9rem" }}
+              >
                 {area.descripcion}
               </div>
             </div>
@@ -91,7 +126,7 @@ export default function AreasDePractica() {
   );
 
   return (
-    <div>
+    <div className="bg-black min-h-screen">
       {/* Imagen de fondo con título */}
       <div
         className="h-72 bg-cover bg-center flex flex-col justify-center items-center text-white"
@@ -101,9 +136,9 @@ export default function AreasDePractica() {
       </div>
 
       {/* Dos columnas independientes */}
-      <div className="max-w-6xl mx-auto p-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-        {renderColumn(col1, openIndexCol1, 1)}
-        {renderColumn(col2, openIndexCol2, 2)}
+      <div className="font-mona max-w-7xl mx-auto p-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        {renderColumn(col1, openIndexesCol1, 1)}
+        {renderColumn(col2, openIndexesCol2, 2)}
       </div>
     </div>
   );

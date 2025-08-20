@@ -1,58 +1,18 @@
-const cards = [
-  {
-    img: "/docs/images/blog/image-1.jpg",
-    title: "Righetti Sagrera Santino",
-    desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
-    link: "#",
-  },
-  {
-    img: "/docs/images/blog/image-2.jpg",
-    title: "Gandione Santiago",
-    desc: "Descubre cómo R&G Bureau Legal lidera el asesoramiento en Derecho Minero en Córdoba.",
-    link: "#",
-  },
-  {
-    img: "/docs/images/blog/image-3.jpg",
-    title: "Compromiso y ética profesional",
-    desc: "Nuestro equipo se distingue por su rigor técnico y compromiso ético en cada caso.",
-    link: "#",
-  },
-];
+import React from "react";
 
 const LaFirma = () => {
   return (
-    <section className="bg-black pt-20 pb-12 px-4" style={{ backgroundColor: "#000" }}>
-      {/* Cards Flowbite */}
-      <div style={{marginTop: "30px" }} className="max-w-6xl mx-auto mb-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4">
-          {cards.map((card, idx) => (
-            <div
-              key={idx}
-              className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto"
-            >
-              <a href={card.link}>
-                <img className="rounded-t-lg w-full h-48 object-cover" src={card.img} alt={card.title} />
-              </a>
-              <div className="p-5">
-                <a href={card.link}>
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{card.title}</h5>
-                </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{card.desc}</p>
-                <a
-                  href={card.link}
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Read more
-                  <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
+    <section className="bg-black pb-12 px-4" style={{ backgroundColor: "#000" }}>
+      {/* Imagen de fondo con título */}
+      <div
+        className="h-72 bg-cover bg-center flex flex-col justify-center items-center text-white mb-10"
+        style={{
+          backgroundImage: `url(${process.env.PUBLIC_URL}/oficina.jpg)`,
+          marginTop: 0,
+        }}
+      >
+        <h1 className="text-4xl font-bold">¿Quienes Somos?</h1>
       </div>
-
       {/* Texto institucional */}
       <div className="py-12 max-w-4xl mx-auto font-bona text-white space-y-8">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">R&G Bureau Legal</h2>

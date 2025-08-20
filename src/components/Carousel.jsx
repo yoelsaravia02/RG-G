@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react'
 
 const Carousel = () => {
@@ -33,14 +32,21 @@ const Carousel = () => {
             textShadow: '0 0 10px rgba(0,0,0,0.3)'
           }}
         >
-          <h1 className="text-6xl sm:text-6xl md:text-7xl font-extrabold mb-2 font-bona" style={{whiteSpace: 'nowrap'}}>
-            Righetti & Gandione
+          <h1
+            className="font-extrabold mb-2 font-garamond"
+            style={{
+              whiteSpace: 'nowrap',
+              fontSize: '2.2rem', // base para móviles
+            }}
+          >
+            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+              RIGHETTI GANDIONE & GROUNDS
+            </span>
           </h1>
           <h1
             className="font-mona"
             style={{
               fontWeight: '',
-              fontSize: '1.8rem',
               color: '#fff',
               letterSpacing: '2px',
               marginTop: '5px',
@@ -48,7 +54,9 @@ const Carousel = () => {
               textShadow: '0 0 10px rgba(0,0,0,0.3)'
             }}
           >
-            Bureau Legal
+            <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+              Bureau Legal
+            </span>
           </h1>
         </div>
       </div>
