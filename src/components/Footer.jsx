@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 // import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <footer className="bg-black text-white pt-10" style={{ background: "#000" }}>
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center md:grid md:grid-cols-3 md:gap-10 pb-10">
@@ -31,20 +34,69 @@ const Footer = () => {
         {/* Columna central y derecha unidas en mobile */}
         <div className="w-full md:w-auto">
           <ul className="space-y-2 text-center flex flex-col items-center md:block font-mona text-md">
-            <li>Inicio</li>
-            <li>Quienes Somos</li>
-            <li>Áreas de práctica</li>
+            <li>
+              <button
+                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300"
+                onClick={() => navigate("/")}
+              >
+                Inicio
+              </button>
+            </li>
+            <li>
+              <button
+                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300"
+                onClick={() => navigate("/firma")}
+              >
+                Quienes Somos
+              </button>
+            </li>
+            <li>
+              <button
+                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300"
+                onClick={() => navigate("/areas")}
+              >
+                Áreas de práctica
+              </button>
+            </li>
             {/* Solo muestra estos en mobile */}
-            <li className="md:hidden">Profesionales</li>
-            <li className="md:hidden">Contacto</li>
+            <li className="md:hidden">
+              <button
+                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300"
+                onClick={() => navigate("/profesionales")}
+              >
+                Profesionales
+              </button>
+            </li>
+            <li className="md:hidden">
+              <button
+                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300"
+                onClick={() => navigate("/contacto")}
+              >
+                Contacto
+              </button>
+            </li>
           </ul>
         </div>
 
         {/* Columna derecha solo en desktop */}
         <div className="text-md flex-col items-center font-mona hidden md:flex">
           <ul className="space-y-2 text-center">
-            <li>Profesionales</li>
-            <li>Contacto</li>
+            <li>
+              <button
+                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300"
+                onClick={() => navigate("/profesionales")}
+              >
+                Profesionales
+              </button>
+            </li>
+            <li>
+              <button
+                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300"
+                onClick={() => navigate("/contacto")}
+              >
+                Contacto
+              </button>
+            </li>
           </ul>
         </div>
       </div>

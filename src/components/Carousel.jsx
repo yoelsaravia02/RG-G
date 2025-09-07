@@ -33,14 +33,14 @@ const Carousel = () => {
           }}
         >
           <h1
-            className="font-extrabold mb-2 font-garamond"
+            className="font-extrabold mb-2 font-bona"
             style={{
               whiteSpace: 'nowrap',
               fontSize: '2.2rem', // base para móviles
             }}
           >
             <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
-              RIGHETTI GANDIONE & GROUNDS
+              Righetti Gandione & Grounds
             </span>
           </h1>
           <h1

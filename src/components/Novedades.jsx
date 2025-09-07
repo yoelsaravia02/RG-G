@@ -61,7 +61,8 @@ function Novedades() {
       background: '#000',
       minHeight: '500px',
       margin: 0,
-      padding: 0,
+      paddingTop: "90px",
+      paddingBottom: "50px",
       boxSizing: 'border-box'
     }}>
 

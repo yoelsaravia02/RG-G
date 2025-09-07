@@ -63,7 +63,7 @@ const NavBar = ({ carouselRef }) => {
               closeMenu();
             }}
           >
-            <img src={`${process.env.PUBLIC_URL}/${isTransparent ? 'logoSantinoBlanco.png' : 'logoSantinoNegro.png'}`} className="h-10" style={{ height: '48px', width: 'auto' }} alt="Logo Santino" />
+            <img src={`${process.env.PUBLIC_URL}/${isTransparent ? 'logoSantinoBlanco.png' : 'logoSantinoNegro.png'}`} className="h-10" style={{ height: '52px', width: 'auto' }} alt="Logo Santino" />
           </a>
           {/* Menú principal */}
           <ul className={`hidden md:flex space-x-8 font-medium ${isTransparent ? 'text-white' : 'text-black'}`}>

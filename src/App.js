@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import LaFirma from "./pages/LaFirma.jsx";
 import Footer from "./components/Footer.jsx";
+import Contacto from "./pages/Contacto.jsx";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import AreasDePractica from "./pages/AreasDePractica.jsx";
@@ -19,10 +20,10 @@ function App() {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         {/* Meta por defecto (para toda la web) */}
         <Helmet>
-          <title>R & G - Bureau Legal</title>
+          <title>RG & G - Bureau Legal</title>
           <meta
             name="description"
-            content="Righetti Gandione & Grounds - Estudio jurídico especializado en derecho corporativo, civil y comercial."
+            content="Righetti Gandione & Grounds - Bureau legal especializado en derecho corporativo, civil y comercial."
           />
           <link rel="canonical" href="https://righettigandionegrounds.com.ar/" />
         </Helmet>
@@ -38,10 +39,10 @@ function App() {
             element={
               <>
                 <Helmet>
-                  <title>Inicio | R & G - Bureau Legal</title>
+                  <title>Inicio | RG & G - Bureau Legal</title>
                   <meta
                     name="description"
-                    content="Bienvenido a Righetti Gandione & Grounds, un estudio jurídico con experiencia en diversas áreas de práctica."
+                    content="Bienvenido a Righetti Gandione & Grounds, un bureau legal con experiencia en diversas áreas de práctica."
                   />
                   <link
                     rel="canonical"
@@ -59,10 +60,10 @@ function App() {
             element={
               <>
                 <Helmet>
-                  <title>La Firma | R & G - Bureau Legal</title>
+                  <title>La Firma | RG & G - Bureau Legal</title>
                   <meta
                     name="description"
-                    content="Conoce la historia, valores y trayectoria de nuestro estudio jurídico."
+                    content="Conoce la historia, valores y trayectoria de nuestro bureau legal."
                   />
                   <link
                     rel="canonical"
@@ -80,7 +81,7 @@ function App() {
             element={
               <>
                 <Helmet>
-                  <title>Áreas de práctica | R & G - Bureau Legal</title>
+                  <title>Áreas de práctica | RG & G - Bureau Legal</title>
                   <meta
                     name="description"
                     content="Especialistas en derecho corporativo, civil, comercial y más."
@@ -101,7 +102,7 @@ function App() {
             element={
               <>
                 <Helmet>
-                  <title>Profesionales | R & G - Bureau Legal</title>
+                  <title>Profesionales | RG & G - Bureau Legal</title>
                   <meta
                     name="description"
                     content="Conoce a los abogados y profesionales que forman parte de nuestro equipo."
@@ -112,6 +113,27 @@ function App() {
                   />
                 </Helmet>
                 <Profesionales />
+              </>
+            }
+          />
+
+          {/* Contacto */}
+          <Route
+            path="/contacto"
+            element={
+              <>
+                <Helmet>
+                  <title>Contacto | RG & G - Bureau Legal</title>
+                  <meta
+                    name="description"
+                    content="Contactate con RG & G Bureau Legal."
+                  />
+                  <link
+                    rel="canonical"
+                    href="https://righettigandionegrounds.com.ar/contacto"
+                  />
+                </Helmet>
+                <Contacto />
               </>
             }
           />
