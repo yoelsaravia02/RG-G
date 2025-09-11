@@ -113,7 +113,11 @@ export default function AreasDePractica() {
       {items.map((area, index) => {
         const isOpen = openIndexes.includes(index);
         return (
-          <div key={index} className="border border-gray-300 overflow-hidden">
+          <div 
+            key={index} 
+            className="border border-gray-300 overflow-hidden"
+            style={{ borderRadius: "10px" }} // Agrega esta línea
+          >
             <button
               onClick={() => toggleArea(index, col)}
               className={`w-full text-left px-4 py-3 flex justify-between items-center transition-colors duration-300`}
@@ -150,7 +154,7 @@ export default function AreasDePractica() {
                 maxHeight: isOpen ? "500px" : "0px",
                 transition: "max-height 1.5s cubic-bezier(0.4,0,0.2,1)",
                 overflow: "hidden",
-                background: isOpen ? "#fff" : "transparent",
+                background:"#fff",
               }}
             >
               <div
@@ -174,13 +178,17 @@ export default function AreasDePractica() {
       {/* Imagen de fondo con título */}
       <div
         className="h-72 bg-cover bg-center flex flex-col justify-center items-center text-white"
-        style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/oficina.jpg)` }}
+        style={{ 
+          backgroundImage: `url(${process.env.PUBLIC_URL}/oficina.jpg)`,
+          marginBottom: "60px" // Agrega esta línea
+        }}
       >
         <h1 className="text-4xl font-bold">Áreas de práctica</h1>
       </div>
 
       {/* Dos columnas independientes */}
-      <div className="bg-black font-mona max-w-7xl mx-auto p-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="py-8 sbg-black font-mona max-w-7xl mx-auto p-8 grid grid-cols-1 md:grid-cols-2 gap-6"
+      style={{paddingBottom:"80px"}}>
         {renderColumn(col1, openIndexesCol1, 1)}
         {renderColumn(col2, openIndexesCol2, 2)}
       </div>

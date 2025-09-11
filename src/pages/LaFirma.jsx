@@ -9,12 +9,13 @@ const LaFirma = () => {
         style={{
           backgroundImage: `url(${process.env.PUBLIC_URL}/oficina.jpg)`,
           marginTop: 0,
+          marginBottom: "60px", // Agrega esta línea
         }}
       >
         <h1 className="text-4xl font-bold">¿Quienes Somos?</h1>
       </div>
       {/* Texto institucional */}
-      <div className="py-12 max-w-4xl mx-auto font-bona text-white space-y-8">
+      <div className="py-8 max-w-4xl mx-auto font-bona text-white space-y-8">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">R&G Bureau Legal</h2>
         <p className="font-mona text-lg md:text-xl text-justify">
           Righetti & Gandione Bureau Legal es una firma jurídica orientada a brindar soluciones legales especializadas en materias complejas, con enfoque en la empresa, la actividad patrimonial, la contratación civil y comercial, y los sectores estratégicos de la economía.

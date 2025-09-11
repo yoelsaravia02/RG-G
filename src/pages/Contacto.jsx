@@ -25,6 +25,7 @@ const Contacto = () => {
         style={{
           backgroundImage: `url(${process.env.PUBLIC_URL}/oficina.jpg)`,
           marginTop: 0,
+          marginBottom: "60px", // Agrega esta línea
         }}
       >
         <h1 className="text-4xl font-bold">Contacto</h1>
@@ -32,15 +33,15 @@ const Contacto = () => {
 
       {/* Tarjetas de información */}
       <div
-        className="grid md:grid-cols-3 gap-6 mx-auto py-12 px-4"
+        className="grid md:grid-cols-3 gap-6 mx-auto py-8 px-4"
         style={{
           maxWidth: "1400px",
           width: "100%",
         }}
       >
         <div
-          className="bg-white shadow-md rounded-lg p-6 text-center flex flex-col items-center justify-center"
-          style={{ height: "180px", minWidth: 0 }}
+          className="bg-white shadow-md p-6 text-center flex flex-col items-center justify-center"
+          style={{ height: "200px", minWidth: 0, borderRadius:"12px" }}
         >
           <div
             className="mb-2 flex justify-center items-center"
@@ -48,12 +49,24 @@ const Contacto = () => {
           >
             <FaPhoneAlt />
           </div>
-          <h3 className="font-semibold text-lg">Teléfono de contacto</h3>
-          <p className="text-gray-700 mt-1">+54-351-675-1729</p>
+          <h3 className="font-semibold text-lg mb-3">Teléfonos de contacto</h3>
+          
+          {/* Grid de teléfonos */}
+          <div className="grid grid-cols-3 gap-x-4 w-full text-xs text-gray-700">
+            {/* Fila de apellidos */}
+            <div className="font-medium text-center">Righetti</div>
+            <div className="font-medium text-center">Gandione</div>
+            <div className="font-medium text-center">Grounds</div>
+            
+            {/* Fila de números */}
+            <div className="text-center">+54-9-351-8063677</div>
+            <div className="text-center">+54-9-358-4497250</div>
+            <div className="text-center">+54-9-116-4090255</div>
+          </div>
         </div>
         <div
           className="bg-white shadow-md rounded-lg p-6 text-center flex flex-col items-center justify-center"
-          style={{ height: "180px", minWidth: 0 }}
+          style={{ height: "200px", minWidth: 0 }}
         >
           <div
             className="mb-2 flex justify-center items-center"
@@ -66,7 +79,7 @@ const Contacto = () => {
         </div>
         <div
           className="bg-white shadow-md rounded-lg p-6 text-center flex flex-col items-center justify-center"
-          style={{ height: "180px", minWidth: 0 }}
+          style={{ height: "200px", minWidth: 0 }}
         >
           <div
             className="mb-2 flex justify-center items-center"
@@ -76,7 +89,7 @@ const Contacto = () => {
           </div>
           <h3 className="font-semibold text-lg">Dirección</h3>
           <p className="text-gray-700 mt-1">
-            Humberto Primo 650 Torre Capitalinas piso 13
+            Obispo Oro 440
           </p>
         </div>
       </div>
@@ -221,7 +234,7 @@ const Contacto = () => {
               style={{ paddingTop:"20px", minWidth: 0, width: "100%", height: "470px" }}
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108977.23899205525!2d-64.27661283719213!3d-31.399280321967925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses!2sar!4v1756735038371!5m2!1ses!2sar"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.5579170220158!2d-64.1817645!3d-31.4263041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a291bfb45281%3A0xb92e36e580615ad5!2sObispo%20Oro%20444%2C%20X5000BFJ%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1757603644358!5m2!1ses!2sar"
                 width="100%"
                 height="100%"
                 style={{ border: 0, borderRadius: "12px" }}
@@ -239,3 +252,4 @@ const Contacto = () => {
 };
 
 export default Contacto;
+

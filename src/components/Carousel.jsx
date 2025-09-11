@@ -35,6 +35,7 @@ const Carousel = () => {
           <h1
             className="font-extrabold mb-2 font-bona"
             style={{
+              marginTop:"45px",
               whiteSpace: 'nowrap',
               fontSize: '2.2rem', // base para móviles
             }}
