@@ -33,66 +33,84 @@ const Contacto = () => {
 
       {/* Tarjetas de información */}
       <div
-        className="grid md:grid-cols-3 gap-6 mx-auto py-8 px-4"
+        className="grid grid-responsive-1279 gap-6 mx-auto py-8 px-4"
         style={{
           maxWidth: "1400px",
           width: "100%",
         }}
       >
-        <div
-          className="bg-white shadow-md p-6 text-center flex flex-col items-center justify-center"
-          style={{ height: "200px", minWidth: 0, borderRadius:"12px" }}
-        >
-          <div
-            className="mb-2 flex justify-center items-center"
-            style={{ fontSize: "48px" }}
-          >
+        {/* Tarjeta Teléfonos */}
+        <div className="bg-white shadow-md p-6 text-center flex flex-col items-center rounded-lg">
+          <div className="flex justify-center items-center" style={{ fontSize: "48px" }}>
             <FaPhoneAlt />
           </div>
-          <h3 className="font-semibold text-lg mb-3">Teléfonos de contacto</h3>
-          
+          <h3 className="font-semibold text-lg mt-4 mb-2">Teléfonos de contacto</h3>
+
           {/* Grid de teléfonos */}
-          <div className="grid grid-cols-3 gap-x-4 w-full text-xs text-gray-700">
-            {/* Fila de apellidos */}
+          <div className="grid grid-cols-3 sm:grid-cols-3 gap-x-4 w-full text-xs sm:text-sm text-gray-700 mt-3">
             <div className="font-medium text-center">Righetti</div>
             <div className="font-medium text-center">Gandione</div>
             <div className="font-medium text-center">Grounds</div>
-            
-            {/* Fila de números */}
-            <div className="text-center">+54-9-351-8063677</div>
-            <div className="text-center">+54-9-358-4497250</div>
-            <div className="text-center">+54-9-116-4090255</div>
+
+            <div className="text-center break-words">+54-9-351-8063677</div>
+            <div className="text-center break-words">+54-9-358-4497250</div>
+            <div className="text-center break-words">+54-9-116-4090255</div>
           </div>
         </div>
+
+        {/* Tarjeta Correo */}
         <div
-          className="bg-white shadow-md rounded-lg p-6 text-center flex flex-col items-center justify-center"
+          className="bg-white shadow-md rounded-lg p-6 text-center flex flex-col items-center"
           style={{ height: "200px", minWidth: 0 }}
         >
-          <div
-            className="mb-2 flex justify-center items-center"
-            style={{ fontSize: "48px" }}
-          >
+          <div className="flex justify-center items-center" style={{ fontSize: "48px" }}>
             <IoMdMail />
           </div>
-          <h3 className="font-semibold text-lg">Correo Electrónico</h3>
-          <p className="text-gray-700 mt-1">info@rggabogados.com.ar</p>
+          {/* Título alineado con los otros */}
+          <h3 className="font-semibold text-lg mt-4 mb-2">Correo Electrónico</h3>
+
+          {/* Grid de correos separado del título */}
+          <div
+            className="grid grid-cols-2 gap-x-4 gap-y-2 w-full text-xs text-gray-700"
+            style={{
+              marginLeft: "-110px",
+              marginTop: "3px", // <- Desplaza SOLO la grilla hacia abajo
+            }}
+          >
+            <div className="font-medium text-center">Righetti</div>
+            <div className="text-center">srighetti@righettigandionegrounds.com.ar</div>
+
+            <div className="font-medium text-center">Gandione</div>
+            <div className="text-center">sgandione@righettigandionegrounds.com.ar</div>
+
+            <div className="font-medium text-center">Grounds</div>
+            <div className="text-center">tgrounds@righettigandionegrounds.com.ar</div>
+          </div>
         </div>
+
+        {/* Tarjeta Dirección */}
         <div
           className="bg-white shadow-md rounded-lg p-6 text-center flex flex-col items-center justify-center"
           style={{ height: "200px", minWidth: 0 }}
         >
-          <div
-            className="mb-2 flex justify-center items-center"
-            style={{ fontSize: "48px" }}
-          >
+          <div className="flex justify-center items-center" style={{ fontSize: "48px" }}>
             <HiMapPin />
           </div>
-          <h3 className="font-semibold text-lg">Dirección</h3>
-          <p className="text-gray-700 mt-1">
-            Obispo Oro 440
+          <h3 className="font-semibold text-lg mt-4 mb-2">Dirección</h3>
+          <p 
+            className="text-gray-700 mt-3 text-sm md:text-base px-2"
+            style={{ 
+              wordWrap: "break-word", 
+              overflowWrap: "break-word",
+              lineHeight: "1.4",
+              maxWidth: "100%"
+            }}
+          >
+            Obispo Oro 440, Córdoba, Córdoba
           </p>
         </div>
       </div>
+
 
       {/* Formulario + mapa */}
       <div className="w-full px-2 pt-16 pb-16 flex justify-center">
@@ -231,7 +249,7 @@ const Contacto = () => {
             {/* Mapa */}
             <div
               className="flex justify-center items-center"
-              style={{ paddingTop:"20px", minWidth: 0, width: "100%", height: "470px" }}
+              style={{ paddingTop: "20px", minWidth: 0, width: "100%", height: "470px" }}
             >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.5579170220158!2d-64.1817645!3d-31.4263041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a291bfb45281%3A0xb92e36e580615ad5!2sObispo%20Oro%20444%2C%20X5000BFJ%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1757603644358!5m2!1ses!2sar"

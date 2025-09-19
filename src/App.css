@@ -15,3 +15,16 @@
 .font-garamond {
   font-family: 'EB Garamond', serif;
 }
+
+/* En tu archivo CSS global */
+@media (max-width: 1279px) {
+  .grid-responsive-1279 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-responsive-1279 {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}

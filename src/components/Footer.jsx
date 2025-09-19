@@ -107,7 +107,7 @@ const Footer = () => {
         style={{ fontSize: "0.85rem" }}
       >
         <p className="text-white">
-          BUREAU LEGAL RIGHETTI GANDIONE & GROUNDS. Todos los derechos reservados. Prohibida su
+          RIGHETTI GANDIONE & GROUNDS BUREAU LEGAL. Todos los derechos reservados. Prohibida su
           reproducción total o parcial.
         </p>
       </div>

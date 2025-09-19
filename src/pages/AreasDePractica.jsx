@@ -11,21 +11,16 @@ const areas = [
     titulo: "Derecho Minero",
     descripcion: (
       <>
-        <p>
+        {/* <p>
           R &amp; G Bureau Legal es el único estudio jurídico de la Provincia de
           Córdoba que ha desarrollado una estructura profesional especializada en el
           asesoramiento jurídico integral del sector minero.
+        </p> */}
+        <p>
+          La actuación comprende la adquisición y mantenimiento de derechos mineros, la elaboración y revisión de contratos, la asistencia en materia ambiental, la representación ante autoridades administrativas y el cumplimiento normativo conforme al régimen minero vigente.
         </p>
         <p>
-          La actuación comprende la adquisición y mantenimiento de derechos mineros,
-          la elaboración y revisión de contratos, la asistencia en materia ambiental,
-          la representación ante autoridades administrativas y el cumplimiento
-          normativo conforme al régimen minero vigente.
-        </p>
-        <p>
-          El abordaje legal se adapta a las exigencias propias de las etapas de
-          prospección, exploración y explotación, tanto a nivel provincial como
-          federal.
+          El abordaje legal se adapta a las exigencias propias de las etapas de prospección, exploración y explotación, tanto a nivel provincial como federal.
         </p>
       </>
     ),

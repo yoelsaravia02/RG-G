@@ -11,7 +11,7 @@ const HomePage = ({ setFading }) => (
         <ShapeDivider />
       </div>
     </div>
-    <Novedades />
+    {/* <Novedades /> */}
   </div>
 );
 
