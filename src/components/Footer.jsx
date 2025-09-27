@@ -6,15 +6,15 @@ const Footer = () => {
   const navigate = useNavigate();
 
   return (
-    <footer className="bg-black text-white pt-10" style={{ background: "#000" }}>
+    <footer className="bg-black text-white pt-10" style={{ background: "#161616ff" }}>
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center md:grid md:grid-cols-3 md:gap-10 pb-10">
         {/* Columna izquierda: Logo y redes */}
         <div className="flex flex-col items-center gap-4 mb-6 md:mb-0">
           <img
-            src={`${process.env.PUBLIC_URL}/logoFooter.png`}
+            src={`${process.env.PUBLIC_URL}/logoFooter-p.png`}
             alt="Logo Footer"
             className="mb-4"
-            style={{ width: "280px", height: "auto" }}
+            style={{ width: "290px", height: "auto" }}
           />
           <div className="flex items-center gap-4 mt-2 text-white text-xl justify-center">
             {/* <a href="mailto:info@rg-estudio.com" aria-label="Correo">

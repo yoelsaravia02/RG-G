@@ -2,7 +2,7 @@ import React from "react";
 
 const LaFirma = () => {
   return (
-    <section className="bg-black pb-12" style={{ backgroundColor: "#000" }}>
+    <section className="bg-black pb-12" style={{ backgroundColor: "#161616ff" }}>
       {/* Imagen de fondo con título */}
       <div
         className="h-72 bg-cover bg-center flex flex-col justify-center items-center text-white mb-10"

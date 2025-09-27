@@ -167,8 +167,8 @@ export default function AreasDePractica() {
 
   return (
     <div className="bg-black min-h-screen" style={{
-      backgroundColor: "#000",
-      background: "linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 80%)"
+      backgroundColor: "#161616ff",
+      // background: "linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 80%)"
     }}>
       {/* Imagen de fondo con título */}
       <div
