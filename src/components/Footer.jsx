@@ -36,7 +36,14 @@ const Footer = () => {
           <ul className="space-y-2 text-center flex flex-col items-center md:block font-mona text-md">
             <li>
               <button
-                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300"
+                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300 transition-transform duration-200"
+                style={{ 
+                  display: 'inline-block', 
+                  transition: 'transform 0.2s', 
+                  fontWeight: 400 
+                }}
+                onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                 onClick={() => navigate("/")}
               >
                 Inicio
@@ -44,7 +51,14 @@ const Footer = () => {
             </li>
             <li>
               <button
-                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300"
+                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300 transition-transform duration-200"
+                style={{ 
+                  display: 'inline-block', 
+                  transition: 'transform 0.2s', 
+                  fontWeight: 400 
+                }}
+                onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                 onClick={() => navigate("/firma")}
               >
                 Quienes Somos
@@ -52,7 +66,14 @@ const Footer = () => {
             </li>
             <li>
               <button
-                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300"
+                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300 transition-transform duration-200"
+                style={{ 
+                  display: 'inline-block', 
+                  transition: 'transform 0.2s', 
+                  fontWeight: 400 
+                }}
+                onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                 onClick={() => navigate("/areas")}
               >
                 Áreas de práctica
@@ -61,7 +82,14 @@ const Footer = () => {
             {/* Solo muestra estos en mobile */}
             <li className="md:hidden">
               <button
-                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300"
+                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300 transition-transform duration-200"
+                style={{ 
+                  display: 'inline-block', 
+                  transition: 'transform 0.2s', 
+                  fontWeight: 400 
+                }}
+                onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                 onClick={() => navigate("/profesionales")}
               >
                 Profesionales
@@ -69,7 +97,14 @@ const Footer = () => {
             </li>
             <li className="md:hidden">
               <button
-                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300"
+                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300 transition-transform duration-200"
+                style={{ 
+                  display: 'inline-block', 
+                  transition: 'transform 0.2s', 
+                  fontWeight: 400 
+                }}
+                onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                 onClick={() => navigate("/contacto")}
               >
                 Contacto
@@ -83,7 +118,14 @@ const Footer = () => {
           <ul className="space-y-2 text-center">
             <li>
               <button
-                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300"
+                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300 transition-transform duration-200"
+                style={{ 
+                  display: 'inline-block', 
+                  transition: 'transform 0.2s', 
+                  fontWeight: 400 
+                }}
+                onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                 onClick={() => navigate("/profesionales")}
               >
                 Profesionales
@@ -91,7 +133,14 @@ const Footer = () => {
             </li>
             <li>
               <button
-                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300"
+                className="bg-transparent border-none text-inherit font-inherit cursor-pointer hover:text-blue-300 transition-transform duration-200"
+                style={{ 
+                  display: 'inline-block', 
+                  transition: 'transform 0.2s', 
+                  fontWeight: 400 
+                }}
+                onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                 onClick={() => navigate("/contacto")}
               >
                 Contacto

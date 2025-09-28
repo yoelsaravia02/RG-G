@@ -1,4 +1,5 @@
 import Carousel from "../components/Carousel.jsx";
+import Carousel1 from "../components/Carousel1.jsx";
 import ShapeDivider from "../components/ShapeDivider.jsx";
 import Novedades from "../components/Novedades.jsx";
 

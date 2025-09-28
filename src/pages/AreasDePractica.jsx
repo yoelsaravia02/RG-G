@@ -174,8 +174,9 @@ export default function AreasDePractica() {
       <div
         className="h-72 bg-cover bg-center flex flex-col justify-center items-center text-white"
         style={{ 
-          backgroundImage: `url(${process.env.PUBLIC_URL}/oficina.jpg)`,
-          marginBottom: "60px" // Agrega esta línea
+          backgroundImage: `url(${process.env.PUBLIC_URL}/oficina1.jpg)`,
+          marginBottom: "60px", // Agrega esta línea
+          height: "350px"
         }}
       >
         <h1 className="text-4xl font-bold">Áreas de práctica</h1>

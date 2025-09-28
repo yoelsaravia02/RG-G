@@ -41,11 +41,12 @@ const Profesionales = () => {
     <section className="bg-black pb-12" style={{ backgroundColor: "#161616ff" }}>
       {/* Imagen de fondo con título */}
       <div
-        className="h-72 bg-cover bg-center flex flex-col justify-center items-center text-white mb-10"
+        className="bg-cover bg-center flex flex-col justify-center items-center text-white mb-10"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/oficina.jpg)`,
+          backgroundImage: `url(${process.env.PUBLIC_URL}/oficina1.jpg)`,
           marginTop: 0,
-          marginBottom: "60px", // Cambia de "mb-10" a 50px
+          marginBottom: "60px",
+          height: "350px",
         }}
       >
         <h1 className="text-4xl font-bold">Profesionales</h1>

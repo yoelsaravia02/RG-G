@@ -7,9 +7,10 @@ const LaFirma = () => {
       <div
         className="h-72 bg-cover bg-center flex flex-col justify-center items-center text-white mb-10"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/oficina.jpg)`,
+          backgroundImage: `url(${process.env.PUBLIC_URL}/oficina1.jpg)`,
           marginTop: 0,
-          marginBottom: "60px", // Agrega esta línea
+          marginBottom: "60px",
+          height: "350px" // Agrega esta línea
         }}
       >
         <h1 className="text-4xl font-bold">¿Quienes Somos?</h1>
@@ -40,7 +41,7 @@ const LaFirma = () => {
           La triada ha iniciado su carrera en el ámbito del ejercicio privado del Derecho, donde adquirieron una sólida experiencia en diversas ramas del ordenamiento jurídico.
         </p>
         <p className="font-mona text-lg md:text-xl text-justify">
-          La filosofía de R&G Bureau Legal se sustenta en la combinación de conocimiento técnico riguroso, análisis jurídico preciso y una permanente vocación de servicio. Asumimos cada asunto encomendado con absoluta dedicación, estricta confidencialidad y un profundo respeto por los principios éticos que rigen la profesión.
+          La filosofía de RG&G Bureau Legal se sustenta en la combinación de conocimiento técnico riguroso, análisis jurídico preciso y una permanente vocación de servicio. Asumimos cada asunto encomendado con absoluta dedicación, estricta confidencialidad y un profundo respeto por los principios éticos que rigen la profesión.
         </p>
         {/* <p className="font-mona text-lg md:text-xl text-justify">
           Nuestra actuación se caracteriza por la solvencia conceptual, el trato reservado y la búsqueda constante de soluciones jurídicas eficientes, sustentadas en el estudio doctrinario, la interpretación normativa y la praxis forense.

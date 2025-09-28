@@ -1,10 +1,30 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 
 const Carousel = () => {
   const containerRef = useRef(null)
   const videoRef = useRef(null)
 
-  // Clases visuales igual que antes
+  // Asegurar que el video se mantenga reproduciendo
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    const playIfPaused = () => video.paused && video.play().catch(() => { })
+
+    video.addEventListener('pause', playIfPaused)
+    video.addEventListener('loadeddata', playIfPaused)
+    video.addEventListener('canplay', playIfPaused)
+
+    const interval = setInterval(playIfPaused, 2000) // cada 2s, menos invasivo
+
+    return () => {
+      video.removeEventListener('pause', playIfPaused)
+      video.removeEventListener('loadeddata', playIfPaused)
+      video.removeEventListener('canplay', playIfPaused)
+      clearInterval(interval)
+    }
+  }, [])
+
   const videoClass = 'block w-full h-full object-cover absolute top-0 left-0 opacity-100 transition-opacity duration-700'
 
   return (
@@ -12,12 +32,18 @@ const Carousel = () => {
       <div className="relative h-full overflow-hidden flex items-center justify-center">
         <video
           ref={videoRef}
-          src={`${process.env.PUBLIC_URL}/video.mp4`}
+          src={`${process.env.PUBLIC_URL}/1video.mp4`}
           className={videoClass}
           autoPlay
           loop
           muted
           playsInline
+          preload="auto"
+          controls={false} // Asegurar que no hay controles
+          onPause={(e) => {
+            // Reanudar inmediatamente si se pausa
+            e.target.play().catch(console.error)
+          }}
         >
           Tu navegador no soporta el video.
         </video>
@@ -35,7 +61,7 @@ const Carousel = () => {
           <h1
             className="font-extrabold mb-2 font-bona"
             style={{
-              marginTop:"45px",
+              marginTop: "45px",
               whiteSpace: 'nowrap',
               fontSize: '2.2rem', // base para móviles
             }}

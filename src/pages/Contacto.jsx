@@ -18,14 +18,15 @@ const Contacto = () => {
   };
 
   return (
-    <div className="bg-gray-50" style={{ backgroundColor: "#000" }}>
+    <div className="bg-gray-50" style={{ backgroundColor: "#161616ff" }}>
       {/* Imagen de fondo con título */}
       <div
         className="h-72 bg-cover bg-center flex flex-col justify-center items-center text-white mb-10"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/oficina.jpg)`,
+          backgroundImage: `url(${process.env.PUBLIC_URL}/oficina1.jpg)`,
           marginTop: 0,
-          marginBottom: "60px", // Agrega esta línea
+          marginBottom: "60px",
+          height: "350px" // Agrega esta línea
         }}
       >
         <h1 className="text-4xl font-bold">Contacto</h1>
