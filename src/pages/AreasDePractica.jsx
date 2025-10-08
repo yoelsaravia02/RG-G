@@ -1,5 +1,6 @@
-// src/components/AreasDePractica.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const areas = [
   {
@@ -86,6 +87,11 @@ export default function AreasDePractica() {
   // Ahora cada columna tiene un array de índices abiertos
   const [openIndexesCol1, setOpenIndexesCol1] = useState([]);
   const [openIndexesCol2, setOpenIndexesCol2] = useState([]);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); // inicializa AOS
+  }, []);
+
 
   const toggleArea = (index, col) => {
     if (col === 1) {
@@ -179,7 +185,7 @@ export default function AreasDePractica() {
           height: "350px"
         }}
       >
-        <h1 className="text-4xl font-bold">Áreas de práctica</h1>
+        <h1 className="text-4xl font-bold" data-aos="zoom-in">Áreas de práctica</h1>
       </div>
 
       {/* Dos columnas independientes */}

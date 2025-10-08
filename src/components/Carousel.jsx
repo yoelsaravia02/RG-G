@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Carousel = () => {
   const containerRef = useRef(null)
@@ -6,6 +8,7 @@ const Carousel = () => {
 
   // Asegurar que el video se mantenga reproduciendo
   useEffect(() => {
+    AOS.init({ duration: 1300, once: true });
     const video = videoRef.current
     if (!video) return
 
@@ -66,7 +69,7 @@ const Carousel = () => {
               fontSize: '2.2rem', // base para móviles
             }}
           >
-            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" data-aos="zoom-in">
               Righetti Gandione & Grounds
             </span>
           </h1>
@@ -81,7 +84,7 @@ const Carousel = () => {
               textShadow: '0 0 10px rgba(0,0,0,0.3)'
             }}
           >
-            <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+            <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl" data-aos="zoom-in">
               Bureau Legal
             </span>
           </h1>

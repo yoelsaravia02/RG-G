@@ -1,5 +1,7 @@
-import React from 'react'
 import { IoMailSharp } from "react-icons/io5";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const cards = [
   {
@@ -22,7 +24,7 @@ const cards = [
     img: `${process.env.PUBLIC_URL}/fotoGrounds.jpg`,
     title: "Trinidad Carolina Grounds",
     puesto: "Socia Fundadora",
-    desc: "Egresada de la Facultad de Derecho de la Universidad Nacional de Córdoba (UNC), me apasiona el derecho tanto desde el estudio académico y la enseñanza, como desde la práctica profesional. Esta combinación me ha permitido desarrollar sólidas habilidades para la resolución de problemas con responsabilidad, organización y compromiso. Cuento con experiencia en litigios en materia Tributaria, Civil y Comercial, y he desarrollado un especial interés por el Derecho de la Navegación y el Derecho Internacional. Disfruto del trabajo en equipo, del aprendizaje constante y de los desafíos que implican crecimiento personal y profesional, buscando siempre dar respuestas eficaces y aportar valor en cada proyecto en el que participo.",
+    desc: "Egresada de la Facultad de Derecho de la Universidad Nacional de Córdoba (UNC), me apasiona el derecho tanto desde el estudio académico y la enseñanza, como desde la práctica profesional. Esta combinación me ha permitido desarrollar sólidas habilidades para la resolución de problemas con responsabilidad, organización y compromiso.\nCuento con experiencia en litigios en materia Tributaria, Civil y Comercial, y he desarrollado un especial interés por el Derecho de la Navegación. Disfruto del trabajo en equipo, del aprendizaje constante y de los desafíos que implican crecimiento personal y profesional, buscando siempre dar respuestas eficaces y aportar valor en cada proyecto en el que participo.",
     link: "mailto:tgrounds@righettigandionegrounds.com.ar",
     mail: "tgrounds@righettigandionegrounds.com.ar",
   },
@@ -37,6 +39,9 @@ const cardWidthClasses = `
 `;
 
 const Profesionales = () => {
+  useEffect(() => {
+      AOS.init({ duration: 1000, once: true }); // inicializa AOS
+    }, []);
   return (
     <section className="bg-black pb-12" style={{ backgroundColor: "#161616ff" }}>
       {/* Imagen de fondo con título */}
@@ -49,7 +54,7 @@ const Profesionales = () => {
           height: "350px",
         }}
       >
-        <h1 className="text-4xl font-bold">Profesionales</h1>
+        <h1 className="text-4xl font-bold" data-aos="zoom-in" >Profesionales</h1>
       </div>
       <div style={{ marginTop: "30px" }} className="py-8 max-w-6xl mx-auto mb-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 items-stretch">
