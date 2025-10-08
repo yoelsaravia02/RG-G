@@ -9,7 +9,6 @@ import "./App.css";
 import AreasDePractica from "./pages/AreasDePractica.jsx";
 import Profesionales from "./pages/Profesionales.jsx";
 
-// Importamos HelmetProvider
 import { HelmetProvider, Helmet } from "react-helmet-async";
 
 function App() {
@@ -18,12 +17,12 @@ function App() {
   return (
     <HelmetProvider>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        {/* Meta por defecto (para toda la web) */}
+        {/* SEO global por defecto */}
         <Helmet>
-          <title>RG & G - Bureau Legal</title>
+          <title>Righetti Gandione & Grounds - Bureau Legal</title>
           <meta
             name="description"
-            content="Righetti Gandione & Grounds - Bureau legal especializado en derecho corporativo, civil y comercial."
+            content="Firma jurídica. Brindamos soluciones legales estratégicas en Córdoba y Argentina."
           />
           <link rel="canonical" href="https://righettigandionegrounds.com.ar/" />
         </Helmet>
@@ -33,16 +32,16 @@ function App() {
         <Routes>
           <Route path="*" element={<Navigate to="/" replace />} />
 
-          {/* Home */}
+          {/* Inicio */}
           <Route
             path="/"
             element={
               <>
                 <Helmet>
-                  <title>Inicio | RG & G - Bureau Legal</title>
+                  <title>Righetti Gandione & Grounds - Bureau Legal</title>
                   <meta
                     name="description"
-                    content="Bienvenido a Righetti Gandione & Grounds, un bureau legal con experiencia en diversas áreas de práctica."
+                    content="Firma jurídica. Brindamos soluciones legales estratégicas en Córdoba y Argentina."
                   />
                   <link
                     rel="canonical"
@@ -60,10 +59,10 @@ function App() {
             element={
               <>
                 <Helmet>
-                  <title>La Firma | RG & G - Bureau Legal</title>
+                  <title>La Firma - RG & G</title>
                   <meta
                     name="description"
-                    content="Conoce la historia, valores y trayectoria de nuestro bureau legal."
+                    content="Conocé la trayectoria, valores y profesionales detrás de Righetti Gandione & Grounds. Experiencia en el ámbito jurídico nacional e internacional."
                   />
                   <link
                     rel="canonical"
@@ -81,10 +80,10 @@ function App() {
             element={
               <>
                 <Helmet>
-                  <title>Áreas de práctica | RG & G - Bureau Legal</title>
+                  <title>Áreas de Práctica - RG & G</title>
                   <meta
                     name="description"
-                    content="Especialistas en derecho corporativo, civil, comercial y más."
+                    content="Derecho societario, minero, civil y comercial, ambiental, bancario, M&A, seguros, propiedad intelectual y más."
                   />
                   <link
                     rel="canonical"
@@ -102,10 +101,10 @@ function App() {
             element={
               <>
                 <Helmet>
-                  <title>Profesionales | RG & G - Bureau Legal</title>
+                  <title>Profesionales - RG & G</title>
                   <meta
                     name="description"
-                    content="Conoce a los abogados y profesionales que forman parte de nuestro equipo."
+                    content="Conocé al equipo de abogados y especialistas que conforman Righetti Gandione & Grounds. Comprometidos con brindar asesoramiento jurídico integral."
                   />
                   <link
                     rel="canonical"
@@ -123,10 +122,10 @@ function App() {
             element={
               <>
                 <Helmet>
-                  <title>Contacto | RG & G - Bureau Legal</title>
+                  <title>Contacto - RG & G</title>
                   <meta
                     name="description"
-                    content="Contactate con RG & G Bureau Legal."
+                    content="Contactá con Righetti Gandione & Grounds. Asesoramiento legal en Córdoba y Argentina."
                   />
                   <link
                     rel="canonical"
