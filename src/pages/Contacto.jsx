@@ -127,7 +127,7 @@ const Contacto = () => {
   };
 
   return (
-    <div className="bg-gray-50" style={{ backgroundColor: "#161616ff" }}>
+    <div className="bg-gray-50" style={{ marginBottom: "-1px", backgroundColor: "#161616ff" }}>
       {/* Toast Container */}
       <ToastContainer
         position="bottom-left"
@@ -189,15 +189,15 @@ const Contacto = () => {
             style={{ marginLeft: "-110px", marginTop: "3px" }}
           >
             <div className="font-medium text-center">Righetti</div>
-            <div className="text-center">
+            <div className="text-center" style={{ marginLeft: "-8px" }}>
               srighetti@righettigandionegrounds.com.ar
             </div>
             <div className="font-medium text-center">Gandione</div>
-            <div className="text-center">
+            <div className="text-center" style={{ marginLeft: "-20px" }}>
               sgandione@righettigandionegrounds.com.ar
             </div>
             <div className="font-medium text-center">Grounds</div>
-            <div className="text-center">
+            <div className="text-center" style={{ marginLeft: "-13px" }}>
               tgrounds@righettigandionegrounds.com.ar
             </div>
           </div>

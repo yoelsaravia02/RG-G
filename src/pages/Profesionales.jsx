@@ -56,7 +56,7 @@ const Profesionales = () => {
       >
         <h1 className="text-4xl font-bold" data-aos="zoom-in" >Profesionales</h1>
       </div>
-      <div style={{ marginTop: "30px" }} className="py-8 max-w-6xl mx-auto mb-12">
+      <div style={{ marginTop: "30px", marginBottom: "-1px" }} className="py-8 max-w-6xl mx-auto mb-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 items-stretch">
           {cards.map((card, idx) => (
             <div

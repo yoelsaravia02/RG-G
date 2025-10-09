@@ -8,7 +8,7 @@ const LaFirma = () => {
   }, []);
 
   return (
-    <section className="bg-black pb-12" style={{ backgroundColor: "#161616ff" }}>
+    <section className="bg-black pb-10" style={{ backgroundColor: "#161616ff", marginBottom: "-1px" }}>
       {/* Imagen de fondo con título */}
       <div
         className="h-72 bg-cover bg-center flex flex-col justify-center items-center text-white mb-10"
@@ -22,7 +22,7 @@ const LaFirma = () => {
         <h1 className="text-4xl font-bold" data-aos="zoom-in">¿Quienes Somos?</h1>
       </div>
       {/* Texto institucional */}
-      <div className="py-8 max-w-4xl mx-auto font-bona text-white space-y-8">
+      <div className="py-8 max-w-4xl mx-auto font-bona text-white space-y-8 px-4 sm:px-6 md:px-8">
         <h2 className="text-3xl md:text-4xl font-bold mb-6" data-aos="zoom-out-up">RG&G Bureau Legal</h2>
         <p className="font-mona text-lg md:text-xl text-justify" data-aos="zoom-out-up">
           Righetti Gandione & Grounds Bureau Legal es una firma jurídica orientada a brindar soluciones legales especializadas en materias complejas, con enfoque en la empresa, la actividad patrimonial, la contratación civil y comercial, y los sectores estratégicos de la economía.

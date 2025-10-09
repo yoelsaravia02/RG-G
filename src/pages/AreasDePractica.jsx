@@ -190,7 +190,7 @@ export default function AreasDePractica() {
 
       {/* Dos columnas independientes */}
       <div className="py-8 sbg-black font-mona max-w-7xl mx-auto p-8 grid grid-cols-1 md:grid-cols-2 gap-6"
-      style={{paddingBottom:"80px"}}>
+      style={{paddingBottom:"80px", marginBottom: "-1px"}}>
         {renderColumn(col1, openIndexesCol1, 1)}
         {renderColumn(col2, openIndexesCol2, 2)}
       </div>
