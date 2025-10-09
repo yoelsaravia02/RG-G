@@ -65,10 +65,11 @@ const Carousel = () => {
             className="font-extrabold mb-2 font-bona"
             style={{
               marginTop: "45px",
-              fontSize: '1.5rem', // ajustado para móviles
+              whiteSpace: 'nowrap',
+              fontSize: '2.2rem', // base para móviles
             }}
           >
-            <span className="block text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight" data-aos="zoom-in">
+            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" data-aos="zoom-in">
               Righetti Gandione & Grounds
             </span>
           </h1>
@@ -83,7 +84,7 @@ const Carousel = () => {
               textShadow: '0 0 10px rgba(0,0,0,0.3)'
             }}
           >
-            <span className="block text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl" data-aos="zoom-in">
+            <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl" data-aos="zoom-in">
               Bureau Legal
             </span>
           </h1>
