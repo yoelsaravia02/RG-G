@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 
 const cards = [
   {
-    img: `${process.env.PUBLIC_URL}/fotoSantino.jpg`,
+    img: `${process.env.PUBLIC_URL}/1fotoSantino.jpg`,
     title: "Santino Righetti Sagrera",
     puesto: "Socio Fundador",
     desc: "Apasionado por el derecho y por transformar los problemas en soluciones reales, tanto para personas como para empresas. Desde mis primeros pasos entendí que la abogacía no es solo interpretar normas, sino acompañar proyectos, defender intereses y generar confianza. Soy cordobés, egresado del Colegio Gabriel Taborin y abogado por la Facultad de Derecho de la Universidad Nacional de Córdoba.\nCon esa convicción, a los 23 años fundé, junto a mis colegas, nuestro propio Bureau Legal, un espacio pensado para brindar un servicio jurídico integral y estratégico. Mi práctica se centra en el Derecho Societario, Minero y el asesoramiento en Family Office, áreas en las que me comprometo a ofrecer respuestas claras, eficaces y sostenibles, siempre con dedicación y profesionalismo.",

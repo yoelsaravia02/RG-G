@@ -62,7 +62,7 @@ const Carousel = () => {
           }}
         >
           <h1
-            className="font-extrabold mb-2 font-bona"
+            className="font-extrabold mb-2 font-dm-serif"
             style={{
               marginTop: "45px",
               fontSize: '2.2rem',

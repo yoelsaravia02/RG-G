@@ -16,6 +16,16 @@
   font-family: 'EB Garamond', serif;
 }
 
+.font-dm-serif {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400; /* Peso regular por defecto de esta fuente */
+  font-style: normal;
+}
+
+.font-bodoni {
+  font-family: "Bodoni Moda", serif;
+}
+
 /* En tu archivo CSS global */
 @media (max-width: 1279px) {
   .grid-responsive-1279 {

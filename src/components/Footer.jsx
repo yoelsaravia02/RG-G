@@ -11,10 +11,10 @@ const Footer = () => {
         {/* Columna izquierda: Logo y redes */}
         <div className="flex flex-col items-center gap-4 mb-6 md:mb-0">
           <img
-            src={`${process.env.PUBLIC_URL}/logoFooter-p.png`}
+            src={`${process.env.PUBLIC_URL}/1logoFooter-p.png`}
             alt="Logo Footer"
             className="mb-4"
-            style={{ width: "290px", height: "auto" }}
+            style={{ width: "320px", height: "auto" }}
           />
           <div className="flex items-center gap-4 mt-2 text-white text-xl justify-center">
             {/* <a href="mailto:info@rg-estudio.com" aria-label="Correo">
