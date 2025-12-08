@@ -155,81 +155,81 @@ const Contacto = () => {
         <h1 className="text-4xl font-bold" data-aos="zoom-in">Contacto</h1>
       </div>
 
-      {/* Tarjetas de información */}
-      <div
-        className="grid grid-responsive-1279 gap-6 mx-auto py-8 px-4"
-        style={{ maxWidth: "1400px", width: "100%" }}
-        // data-aos="zoom-in"
-      >
-        {/* Teléfonos */}
-        <div className="bg-white shadow-md p-6 text-center flex flex-col items-center rounded-lg">
-          <div className="flex justify-center items-center text-5xl">
-            <FaPhoneAlt />
-          </div>
-          <div className="grid grid-cols-3 gap-x-4 w-full text-xs sm:text-sm text-gray-700 mt-3">
-            <div className="font-medium text-center">Righetti</div>
-            <div className="font-medium text-center">Gandione</div>
-            <div className="font-medium text-center">Grounds</div>
-            <div className="text-center break-words">+54-9-351-8063677</div>
-            <div className="text-center break-words">+54-9-358-4497250</div>
-            <div className="text-center break-words">+54-9-116-4090255</div>
-          </div>
-        </div>
+      {/* Mapa + Información */}
+      <div className="w-full px-2 pt-8 pb-16 flex justify-center">
+        <div className="w-full" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div className="grid md:grid-cols-2 gap-2 items-start py-8 px-8 rounded-lg" style={{ background: "#363636ff"}}>
+            {/* Información a la izquierda */}
+            <div className="flex flex-col justify-center" data-aos="fade-right">
+              <h2 className="text-4xl font-serif font-bold text-gray-800 my-5 text-white font-bona">
+                NUESTRO ESTUDIO
+              </h2>
+              <div className="space-y-4">
+                <div>
+                  {/* <h4 className="text-2xl font-semibold text-white mb-3 font-dm-serif">TELÉFONOS</h4> */}
+                  <FaPhoneAlt className="text-3xl font-semibold text-white my-3"></FaPhoneAlt>
+                  <p className="text-white font-bold font-mona">(351) 155 8063677</p>
+                  <p className="text-white font-bold font-mona">(358) 155 4497250</p>
+                  <p className="text-white font-bold font-mona">(116) 155 4090255</p>
+                </div>
+                <div>
+                  {/* <h4 className="text-2xl font-semibold text-white mb-3 font-dm-serif">E-MAILS</h4> */}
+                  <IoMdMail className="text-3xl font-semibold text-white mb-3"></IoMdMail>
+                  <div className="flex flex-col">
+                    <a
+                      href="mailto:srighetti@righettigandionegrounds.com.ar"
+                      className="text-white hover:underline font-mona"
+                    >
+                      srighetti@righettigandionegrounds.com.ar
+                    </a>
+                    <a
+                      href="mailto:sgandione@righettigandionegrounds.com.ar"
+                      className="text-white hover:underline font-mona"
+                    >
+                      sgandione@righettigandionegrounds.com.ar
+                    </a>
+                    <a
+                      href="mailto:tgrounds@righettigandionegrounds.com.ar"
+                      className="text-white hover:underline font-mona"
+                    >
+                      tgrounds@righettigandionegrounds.com.ar
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  {/* <h4 className="text-2xl font-semibold text-white mb-3 font-dm-serif">DIRECCIÓN</h4> */}
+                  <HiMapPin className="text-3xl font-semibold text-white mb-3"></HiMapPin>
+                  <p className="text-white font-mona">Obispo Oro 440</p>
+                  <p className="text-white font-mona">Córdoba, Argentina.</p>
+                </div>
+              </div>
+            </div>
 
-        {/* Correo */}
-        <div
-          className="bg-white shadow-md rounded-lg p-6 text-center flex flex-col items-center"
-          style={{ height: "150px" }}
-        >
-          <div className="flex justify-center items-center text-5xl">
-            <IoMdMail />
-          </div>
-          <div
-            className="grid grid-cols-2 gap-x-4 gap-y-2 w-full text-xs text-gray-700"
-            style={{ marginLeft: "-110px", marginTop: "3px" }}
-          >
-            <div className="font-medium text-center">Righetti</div>
-            <div className="text-center" style={{ marginLeft: "-8px" }}>
-              srighetti@righettigandionegrounds.com.ar
-            </div>
-            <div className="font-medium text-center">Gandione</div>
-            <div className="text-center" style={{ marginLeft: "-20px" }}>
-              sgandione@righettigandionegrounds.com.ar
-            </div>
-            <div className="font-medium text-center">Grounds</div>
-            <div className="text-center" style={{ marginLeft: "-13px" }}>
-              tgrounds@righettigandionegrounds.com.ar
+            {/* Mapa a la derecha */}
+            <div className="flex justify-center items-center" style={{ height: "450px" }} data-aos="fade-left">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.5579170220158!2d-64.1817645!3d-31.4263041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a291bfb45281%3A0xb92e36e580615ad5!2sObispo%20Oro%20444%2C%20X5000BFJ%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1757603644358!5m2!1ses!2sar"
+                width="100%"
+                height="100%"
+                style={{ border: 0, borderRadius: "12px" }}
+                allowFullScreen
+                loading="lazy"
+                title="Mapa Córdoba"
+              ></iframe>
             </div>
           </div>
-        </div>
-
-        {/* Dirección */}
-        <div
-          className="bg-white shadow-md rounded-lg p-6 text-center flex flex-col items-center justify-center"
-          style={{ height: "150px" }}
-        >
-          <div className="flex justify-center items-center text-5xl">
-            <HiMapPin />
-          </div>
-          <p
-            className="text-gray-700 mt-3 text-sm md:text-base px-2"
-            style={{ lineHeight: "1.4" }}
-          >
-            Obispo Oro 440, Córdoba, Córdoba
-          </p>
         </div>
       </div>
 
-      {/* Formulario + mapa */}
-      <div className="w-full px-2 pt-16 pb-16 flex justify-center">
+      {/* Formulario */}
+      <div className="w-full px-2 pb-16 flex justify-center" data-aos="fade-up">
         <div className="w-full" style={{ maxWidth: "1000px", margin: "0 auto" }}>
           <div
-            className="bg-white shadow-md rounded-lg p-4 md:p-8 grid md:grid-cols-2 gap-6"
-            style={{ minHeight: "540px" }}
+            className="bg-white shadow-md rounded-lg p-4 md:p-8"
+            style={{ minHeight: "400px" }}
           >
-            {/* Formulario */}
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col" style={{ gap: "0px" }}>
-              <h3 className="text-2xl font-serif font-semibold mb-4">
+              <h3 className="text-2xl font-serif font-semibold mb-4 font-bona">
                 Envíanos tu consulta
               </h3>
 
@@ -237,7 +237,7 @@ const Contacto = () => {
                 type="text"
                 placeholder="Nombre"
                 {...register("nombre", { required: true })}
-                className="border rounded-lg p-2 mb-1 focus:ring-2 focus:ring-blue-500 w-full"
+                className="border rounded-lg p-2 mb-1 focus:ring-2 focus:ring-blue-500 w-full "
               />
               <div style={{ minHeight: "20px" }} className="mb-2">
                 {errors.nombre && (
@@ -315,19 +315,6 @@ const Contacto = () => {
                 Enviar
               </button>
             </form>
-
-            {/* Mapa */}
-            <div className="flex justify-center items-center" style={{ paddingTop: "45px", height: "530px" }}>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.5579170220158!2d-64.1817645!3d-31.4263041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a291bfb45281%3A0xb92e36e580615ad5!2sObispo%20Oro%20444%2C%20X5000BFJ%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1757603644358!5m2!1ses!2sar"
-                width="100%"
-                height="100%"
-                style={{ border: 0, borderRadius: "12px" }}
-                allowFullScreen
-                loading="lazy"
-                title="Mapa Córdoba"
-              ></iframe>
-            </div>
           </div>
         </div>
       </div>

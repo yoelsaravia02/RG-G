@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
 
         {/* Columna central y derecha unidas en mobile */}
-        <div className="w-full md:w-auto">
+        <div className="w-full md:w-auto" style={{ marginTop: "-45px" }}>
           <ul className="space-y-2 text-center flex flex-col items-center md:block font-mona text-md">
             <li>
               <button
@@ -44,7 +44,10 @@ const Footer = () => {
                 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                onClick={() => navigate("/")}
+                onClick={() => {
+                  navigate("/");
+                  window.scrollTo(0, 0);
+                }}
               >
                 Inicio
               </button>
@@ -59,7 +62,10 @@ const Footer = () => {
                 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                onClick={() => navigate("/firma")}
+                onClick={() => {
+                  navigate("/firma");
+                  window.scrollTo(0, 0);
+                }}
               >
                 Quienes Somos
               </button>
@@ -74,7 +80,10 @@ const Footer = () => {
                 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                onClick={() => navigate("/areas")}
+                onClick={() => {
+                  navigate("/areas");
+                  window.scrollTo(0, 0);
+                }}
               >
                 Áreas de práctica
               </button>
@@ -90,7 +99,10 @@ const Footer = () => {
                 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                onClick={() => navigate("/profesionales")}
+                onClick={() => {
+                  navigate("/profesionales");
+                  window.scrollTo(0, 0);
+                }}
               >
                 Profesionales
               </button>
@@ -105,7 +117,10 @@ const Footer = () => {
                 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                onClick={() => navigate("/contacto")}
+                onClick={() => {
+                  navigate("/contacto");
+                  window.scrollTo(0, 0);
+                }}
               >
                 Contacto
               </button>
@@ -114,7 +129,7 @@ const Footer = () => {
         </div>
 
         {/* Columna derecha solo en desktop */}
-        <div className="text-md flex-col items-center font-mona hidden md:flex">
+        <div style={{ marginTop: "-55px" }} className="text-md flex-col items-center font-mona hidden md:flex">
           <ul className="space-y-2 text-center">
             <li>
               <button
@@ -126,7 +141,10 @@ const Footer = () => {
                 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                onClick={() => navigate("/profesionales")}
+                onClick={() => {
+                  navigate("/profesionales");
+                  window.scrollTo(0, 0);
+                }}
               >
                 Profesionales
               </button>
@@ -141,7 +159,10 @@ const Footer = () => {
                 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                onClick={() => navigate("/contacto")}
+                onClick={() => {
+                  navigate("/contacto");
+                  window.scrollTo(0, 0);
+                }}
               >
                 Contacto
               </button>

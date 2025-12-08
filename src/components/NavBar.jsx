@@ -61,6 +61,7 @@ const NavBar = ({ carouselRef }) => {
               e.preventDefault();
               navigate("/");
               closeMenu();
+              
             }}
           >
             <img src={`${process.env.PUBLIC_URL}/${isTransparent ? 'logoSantinoBlanco.png' : 'logoSantinoNegro.png'}`} className="h-10" style={{ height: '52px', width: 'auto' }} alt="Logo Santino" />
@@ -78,6 +79,7 @@ const NavBar = ({ carouselRef }) => {
                 onClick={e => {
                   e.preventDefault();
                   navigate("/");
+                  window.scrollTo(0, 0);
                 }}
               >Inicio</a>
             </li>
@@ -92,6 +94,7 @@ const NavBar = ({ carouselRef }) => {
                 onClick={e => {
                   e.preventDefault();
                   navigate("/firma");
+                  window.scrollTo(0, 0);
                 }}
               >Quienes Somos</a>
             </li>
@@ -106,6 +109,7 @@ const NavBar = ({ carouselRef }) => {
                 onClick={e => {
                   e.preventDefault();
                   navigate("/areas");
+                  window.scrollTo(0, 0);
                 }}
               >Áreas de práctica</a>
             </li>
@@ -120,6 +124,7 @@ const NavBar = ({ carouselRef }) => {
                 onClick={e => {
                   e.preventDefault();
                   navigate("/profesionales");
+                  window.scrollTo(0, 0);
                 }}
               >Profesionales</a>
             </li>
@@ -134,6 +139,7 @@ const NavBar = ({ carouselRef }) => {
                 onClick={e => {
                   e.preventDefault();
                   navigate("/contacto");
+                  window.scrollTo(0, 0);
                 }}
               >Contacto</a>
             </li>
