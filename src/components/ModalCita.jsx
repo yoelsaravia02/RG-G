@@ -177,7 +177,7 @@ const ModalCita = ({ isOpen, onClose }) => {
         }
       `}</style>
       <div 
-        className="bg-white rounded-lg p-8 max-h-[90vh] overflow-y-auto"
+        className="bg-white rounded-lg p-8 max-h-[65vh] overflow-y-auto"
         style={{ width: MODAL_WIDTH, height: MODAL_HEIGHT }}
       >
         {/* Header con título y botón cerrar */}
@@ -271,7 +271,7 @@ const ModalCita = ({ isOpen, onClose }) => {
           </div>
 
           {/* reCAPTCHA y Botón en la misma fila */}
-          <div className="flex items-center gap-4" style={{ marginTop: "24px" }}>
+          <div className="flex flex-col sm:flex-row sm:items-end gap-4" style={{ marginTop: "24px" }}>
             <div className="flex-1">
               <ReCAPTCHA
                 sitekey={RECAPTCHA_SITE_KEY}
@@ -287,13 +287,15 @@ const ModalCita = ({ isOpen, onClose }) => {
                 )}
               </div>
             </div>
-            <button
-              type="submit"
-              style={{ width: "200px", height: "75px", marginBottom:"30px" }}
-              className="bg-gray-900 hover:bg-gray-600  text-white font-bold rounded-lg transition uppercase text-xl tracking-wide whitespace-nowrap flex-shrink-0 font-mona"
-            >
-              ENVIAR
-            </button>
+            <div className="w-full sm:w-auto sm:flex-shrink-0" style={{ marginTop: "max(0px, -15px)" }}>
+              <button
+                type="submit"
+                style={{ width: "200px", height: "50px" }}
+                className="w-full sm:w-auto bg-gray-900 hover:bg-gray-600  text-white font-bold rounded-lg transition uppercase text-sm tracking-wide whitespace-nowrap"
+              >
+                ENVIAR
+              </button>
+            </div>
           </div>
         </form>
 
