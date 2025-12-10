@@ -290,7 +290,7 @@ const ModalCita = ({ isOpen, onClose }) => {
             <div className="w-full sm:w-auto sm:flex-shrink-0" style={{ marginTop: "max(0px, -15px)" }}>
               <button
                 type="submit"
-                style={{ width: "200px", height: "50px" }}
+                style={{ width: "200px", height: "75px", marginBottom:"30px" }}
                 className="w-full sm:w-auto bg-gray-900 hover:bg-gray-600  text-white font-bold rounded-lg transition uppercase text-sm tracking-wide whitespace-nowrap"
               >
                 ENVIAR
