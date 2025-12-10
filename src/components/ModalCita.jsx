@@ -250,7 +250,7 @@ const ModalCita = ({ isOpen, onClose }) => {
           {/* Mensaje */}
           <div>
             <textarea
-              placeholder="Comenta brevemente tu caso.."
+              placeholder="Comenta brevemente tu caso."
               {...register("mensaje", { required: true, minLength: 10, maxLength: 250 })}
               className="w-full border border-gray-300 rounded-lg p-3 h-32 focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none text-sm"
               style={{ resize: "none" }}
