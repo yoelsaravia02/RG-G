@@ -1,9 +1,10 @@
 import Carousel from "../components/Carousel.jsx";
 import ShapeDivider from "../components/ShapeDivider.jsx";
-import Novedades from "../components/Novedades.jsx";
+import ContactoHP from "../components/ContactoHP.jsx";
 
 const HomePage = ({ setFading }) => (
-  <div>
+  <div style={{
+          backgroundColor: "#161616ff"}}>
     <div className="h-screen flex flex-col">
       {/* Puedes pasar setFading si Carousel lo necesita */}
       <div className="flex-1 relative">
@@ -12,6 +13,7 @@ const HomePage = ({ setFading }) => (
       </div>
     </div>
     {/* <Novedades /> */}
+    <ContactoHP/>
   </div>
 );
 

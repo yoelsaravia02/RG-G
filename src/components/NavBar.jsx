@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 const NavBar = ({ carouselRef }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -67,7 +68,7 @@ const NavBar = ({ carouselRef }) => {
             <img src={`${process.env.PUBLIC_URL}/${isTransparent ? 'logoSantinoBlanco.png' : 'logoSantinoNegro.png'}`} className="h-10" style={{ height: '52px', width: 'auto' }} alt="Logo Santino" />
           </a>
           {/* Menú principal */}
-          <ul className={`hidden md:flex space-x-8 font-medium ${isTransparent ? 'text-white' : 'text-black'}`}>
+          <ul className={`hidden md:flex space-x-8 font-medium items-center ${isTransparent ? 'text-white' : 'text-black'}`}>
             <li>
               <a
                 href="#"
@@ -142,6 +143,38 @@ const NavBar = ({ carouselRef }) => {
                   window.scrollTo(0, 0);
                 }}
               >Contacto</a>
+            </li>
+            {/* Separador */}
+            <li style={{
+              height: '24px',
+              width: '1px',
+              backgroundColor: isTransparent ? 'white' : 'black'
+            }}></li>
+            
+            {/* LinkedIn */}
+            <li>
+              <a
+                href="https://www.linkedin.com/company/righetti-gandione-grounds/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-200 hover:scale-125"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin size={20} />
+              </a>
+            </li>
+            
+            {/* WhatsApp */}
+            <li>
+              <a
+                href="https://wa.me/5493518063677"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-200 hover:scale-125"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp size={20} />
+              </a>
             </li>
           </ul>
           {/* Botón hamburguesa en móvil */}
@@ -229,6 +262,26 @@ const NavBar = ({ carouselRef }) => {
             }}
             className="block hover:text-blue-700"
           >Contacto</a>
+          <div className="border-t pt-4 mt-4 flex gap-4">
+            <a
+              href="https://www.linkedin.com/company/righetti-gandione-grounds/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-700"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin size={24} />
+            </a>
+            <a
+              href="https://wa.me/5493518063677"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-green-500"
+              aria-label="WhatsApp"
+            >
+              <FaWhatsapp size={24} />
+            </a>
+          </div>
         </div>
       </div>
     </nav>

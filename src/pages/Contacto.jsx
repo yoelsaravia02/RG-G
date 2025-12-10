@@ -310,7 +310,7 @@ const Contacto = () => {
 
               <button
                 type="submit"
-                className="bg-blue-900 text-white py-2 px-4 rounded-lg hover:bg-blue-800 transition"
+                className="bg-gray-900 hover:bg-gray-600 hover:text-gray-900 text-white py-2 px-4 rounded-lg hover:bg-blue-800 transition"
               >
                 Enviar
               </button>
