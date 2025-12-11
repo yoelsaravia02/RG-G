@@ -6,7 +6,7 @@ const Footer = () => {
   const navigate = useNavigate();
 
   return (
-    <footer className="bg-black text-white pt-10" style={{ background: "#161616ff" }}>
+    <footer className="bg-black text-white pt-10" style={{ background: "#161616ff", marginTop: "-5px" }}>
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center md:grid md:grid-cols-3 md:gap-10 pb-3">
         {/* Columna izquierda: Logo y redes */}
         <div className="flex flex-col items-center gap-4 mb-6 md:mb-0">

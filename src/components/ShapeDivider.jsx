@@ -8,6 +8,7 @@ const ShapeDivider = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.5, ease: 'easeOut' }}
       className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10 -mb-[4px]"
+      style={{ marginBottom: "max(-0.5px, -0.5px)" }}
     >
       <svg
         className="relative block w-[136%] h-[150px] rotate-180"
