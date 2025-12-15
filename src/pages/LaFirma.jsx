@@ -41,12 +41,8 @@ const LaFirma = () => {
           style={{
             display: "grid",
             gridTemplateColumns: isMobileLayout ? "1fr" : "1fr 1fr", 
-            
-            // --- AQUÍ ESTÁN LAS PROPIEDADES QUE PEDISTE ---
-            // Modifica "30px" por el valor que quieras para la vista de UNA SOLA COLUMNA (< 1200px).
-            // El segundo valor ("130px" y "150px") es para pantallas grandes.
-            paddingRight: isMobileLayout ? "70px" : "130px", 
-            paddingLeft: isMobileLayout ? "70px" : "150px",
+            paddingRight: isMobileLayout ? "50px" : "130px", 
+            paddingLeft: isMobileLayout ? "50px" : "150px",
           }}
         >
 
@@ -71,8 +67,21 @@ const LaFirma = () => {
             <img
               src={`${process.env.PUBLIC_URL}/imagen-QS1.png`}
               alt="RG&G Bureau Legal Team"
-              className="rounded-lg shadow-lg object-cover"
-              style={{ marginTop: "20px", height:"600px", width:"auto" }}
+              className="rounded-lg shadow-lg"
+              style={{ 
+                marginTop: "20px", 
+                
+                // --- CAMBIO SOLICITADO ---
+                // Si es Mobile (<1200px): height "auto" (para no cortar la foto)
+                // Si es Desktop (>=1200px): height "600px" (para llenar el espacio)
+                height: isMobileLayout ? "auto" : "600px",
+                
+                width: "100%",
+                
+                // Usamos 'cover' para que en desktop rellene los 600px sin estirarse,
+                // aunque recorte un poco los bordes superior/inferior si es necesario.
+                objectFit: "cover" 
+              }}
             />
           </div>
 
@@ -81,8 +90,7 @@ const LaFirma = () => {
             className="font-bona text-white space-y-6 lg:space-y-8" 
             data-aos="fade-right"
             style={{
-              gridColumn: isMobileLayout ? "auto" : "span 2",
-              paddingRight: isMobileLayout ? "0px" : "100px"
+              gridColumn: isMobileLayout ? "auto" : "span 2"
             }}
           >
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-4 lg:mt-0 mb-4 font-dm-serif text-left">
