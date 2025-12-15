@@ -1,15 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin, FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 const NavBar = ({ carouselRef }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isTransparent, setIsTransparent] = useState(true);
+  
+  // 1. Estado para controlar el breakpoint exacto de 960px
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 960);
+  
   const navigate = useNavigate();
 
   const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const closeMenu = () => setIsMobileMenuOpen(false);
 
+  // 2. Efecto para detectar el cambio de tamaño de pantalla (Resize)
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth < 960;
+      setIsMobileView(mobile);
+      // Si pasamos a escritorio (>= 960px), cerramos el menú móvil automáticamente
+      if (!mobile) setIsMobileMenuOpen(false);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Efecto del Scroll (Se mantiene igual)
   useEffect(() => {
     const handleScroll = () => {
       if (!carouselRef?.current) {
@@ -62,21 +80,21 @@ const NavBar = ({ carouselRef }) => {
               e.preventDefault();
               navigate("/");
               closeMenu();
-              
             }}
           >
             <img src={`${process.env.PUBLIC_URL}/${isTransparent ? 'logoSantinoBlanco.png' : 'logoSantinoNegro.png'}`} className="h-10" style={{ height: '52px', width: 'auto' }} alt="Logo Santino" />
           </a>
-          {/* Menú principal */}
-          <ul className={`hidden md:flex space-x-8 font-medium items-center ${isTransparent ? 'text-white' : 'text-black'}`}>
+
+          {/* Menú principal (Enlaces) */}
+          {/* Lógica: Si es vista móvil (<960px), se oculta ('hidden'). Si es escritorio, se muestra ('flex'). */}
+          <ul className={`${isMobileView ? 'hidden' : 'flex'} space-x-8 font-medium items-center ${isTransparent ? 'text-white' : 'text-black'}`}>
             <li>
               <a
                 href="#"
                 className="font-mona transition-transform duration-200"
                 style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
-                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'
-                }
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                 onClick={e => {
                   e.preventDefault();
                   navigate("/");
@@ -90,8 +108,7 @@ const NavBar = ({ carouselRef }) => {
                 className="font-mona transition-transform duration-200"
                 style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
-                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'
-                }
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                 onClick={e => {
                   e.preventDefault();
                   navigate("/firma");
@@ -105,8 +122,7 @@ const NavBar = ({ carouselRef }) => {
                 className="font-mona transition-transform duration-200"
                 style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
-                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'
-                }
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                 onClick={e => {
                   e.preventDefault();
                   navigate("/areas");
@@ -120,8 +136,7 @@ const NavBar = ({ carouselRef }) => {
                 className="font-mona transition-transform duration-200"
                 style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
-                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'
-                }
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                 onClick={e => {
                   e.preventDefault();
                   navigate("/profesionales");
@@ -135,8 +150,7 @@ const NavBar = ({ carouselRef }) => {
                 className="font-mona transition-transform duration-200"
                 style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
-                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'
-                }
+                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
                 onClick={e => {
                   e.preventDefault();
                   navigate("/contacto");
@@ -151,7 +165,7 @@ const NavBar = ({ carouselRef }) => {
               backgroundColor: isTransparent ? 'white' : 'black'
             }}></li>
             
-            {/* LinkedIn */}
+            {/* Redes Sociales */}
             <li>
               <a
                 href="https://www.linkedin.com/company/righetti-gandione-grounds/"
@@ -163,8 +177,6 @@ const NavBar = ({ carouselRef }) => {
                 <FaLinkedin size={20} />
               </a>
             </li>
-            
-            {/* WhatsApp */}
             <li>
               <a
                 href="https://wa.me/5493518063677"
@@ -176,30 +188,48 @@ const NavBar = ({ carouselRef }) => {
                 <FaWhatsapp size={20} />
               </a>
             </li>
+            <li>
+              <a
+                href="https://www.instagram.com/righettigandionegrounds"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-200 hover:scale-125"
+                aria-label="Instagram"
+              >
+                <FaInstagram size={20} />
+              </a>
+            </li>
           </ul>
-          {/* Botón hamburguesa en móvil */}
-          <button
-            className="md:hidden text-gray-700 focus:outline-none"
-            onClick={toggleMenu}
-          >
-            {isMobileMenuOpen ? (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
+
+          {/* Botón hamburguesa */}
+          {/* Lógica: Solo se muestra si es vista móvil (<960px). En escritorio se oculta. */}
+          {isMobileView && (
+            <button
+              className="text-gray-700 focus:outline-none"
+              onClick={toggleMenu}
+            >
+              {isMobileMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          )}
+
         </div>
       </div>
+      
       {/* Overlay oscuro */}
       <div
         className={`fixed inset-0 bg-black transition-opacity duration-300 z-40 ${isMobileMenuOpen ? "opacity-40 visible" : "opacity-0 invisible"
           }`}
         onClick={closeMenu}
       />
+      
       {/* Menú móvil deslizable */}
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
@@ -280,6 +310,16 @@ const NavBar = ({ carouselRef }) => {
               aria-label="WhatsApp"
             >
               <FaWhatsapp size={24} />
+            </a>
+
+            <a
+              href="https://www.instagram.com/righettigandionegrounds"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-green-500"
+              aria-label="WhatsApp"
+            >
+              <FaInstagram size={24} />
             </a>
           </div>
         </div>

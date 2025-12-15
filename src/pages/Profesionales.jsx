@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 
 const cards = [
   {
-    img: `${process.env.PUBLIC_URL}/1fotoSantino.jpg`,
+    img: `${process.env.PUBLIC_URL}/2fotoSantino.png`,
     title: "Santino Righetti Sagrera",
     puesto: "Socio Fundador",
     mail: "srighetti@righettigandionegrounds.com.ar",
@@ -16,7 +16,7 @@ const cards = [
     whatsapp: "+5493518063677",
   },
   {
-    img: `${process.env.PUBLIC_URL}/fotoGandione.jpg`,
+    img: `${process.env.PUBLIC_URL}/2fotoGandione.png`,
     title: "Santiago Gandione",
     puesto: "Socio Fundador",
     mail: "sgandione@righettigandionegrounds.com.ar",
@@ -25,7 +25,7 @@ const cards = [
     whatsapp: "+5493584497250",
   },
   {
-    img: `${process.env.PUBLIC_URL}/fotoGrounds.jpg`,
+    img: `${process.env.PUBLIC_URL}/2fotoGrounds.png`,
     title: "Trinidad Carolina Grounds",
     puesto: "Socia Fundadora",
     mail: "tgrounds@righettigandionegrounds.com.ar",
