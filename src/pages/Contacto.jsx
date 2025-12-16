@@ -11,8 +11,8 @@ import "aos/dist/aos.css";
 
 const Contacto = () => {
   useEffect(() => {
-      AOS.init({ duration: 1000, once: true }); // inicializa AOS
-    }, []);
+    AOS.init({ duration: 1000, once: true }); // inicializa AOS
+  }, []);
 
   const {
     register,
@@ -127,7 +127,8 @@ const Contacto = () => {
   };
 
   return (
-    <div className="bg-gray-50" style={{ marginBottom: "-1px", backgroundColor: "#161616ff" }}>
+    // SE AGREGÓ "overflow-x-hidden" AQUI ABAJO PARA EVITAR EL SCROLL HORIZONTAL
+    <div className="bg-gray-50 overflow-x-hidden" style={{ marginBottom: "-1px", backgroundColor: "#161616ff" }}>
       {/* Toast Container */}
       <ToastContainer
         position="bottom-left"

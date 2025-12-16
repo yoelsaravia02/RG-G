@@ -9,7 +9,7 @@ const ModalCita = ({ isOpen, onClose }) => {
   // Propiedades del modal (modifica aquí)
   const MODAL_WIDTH = "600px";
   const MODAL_HEIGHT = "auto";
-  const ROW_GAP = "16px"; // Modifica aquí el espacio entre filas en píxeles
+  const ROW_GAP = "0px"; // Modifica aquí el espacio entre filas en píxeles
   
   const [isClosing, setIsClosing] = useState(false);
 
@@ -182,7 +182,7 @@ const ModalCita = ({ isOpen, onClose }) => {
       >
         {/* Header con título y botón cerrar */}
         <div className="flex justify-between items-start mb-6">
-          <h2 className="mt-1 text-3xl font-bold text-gray-700 flex-1 font-goudy uppercase">
+          <h2 className="mt-1 text-2xl font-bold text-gray-700 flex-1 font-goudy uppercase">
             Quiero que me contacten
           </h2>
           <button
@@ -195,13 +195,13 @@ const ModalCita = ({ isOpen, onClose }) => {
         </div>
 
         {/* Descripción */}
-        <p className="text-gray-700 mb-8 text-xl font-mona">
+        <p className="text-gray-700 mb-3 text-lg sm:text-sm font-mona" style={{}}>
           Dejanos tus datos para ser contactado por nuestro equipo y coordinar
           día/hora de atención.
         </p>
 
         {/* Formulario */}
-        <form onSubmit={handleSubmit(onSubmit)} style={{ display: "flex", flexDirection: "column", gap: ROW_GAP }}>
+        <form onSubmit={handleSubmit(onSubmit)} style={{ display: "flex", flexDirection: "column", gap: ROW_GAP}}>
           {/* Nombre */}
           <div>
             <input
@@ -228,7 +228,7 @@ const ModalCita = ({ isOpen, onClose }) => {
                 {...register("email", { required: true })}
                 className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
               />
-              <div style={{ minHeight: "20px" }} className="mt-1">
+              <div style={{ minHeight: "20px" }} className="">
                 {errors.email && (
                   <span className="text-red-500 text-sm">
                     El correo es requerido
@@ -290,7 +290,7 @@ const ModalCita = ({ isOpen, onClose }) => {
             <div className="w-full sm:w-auto sm:flex-shrink-0" style={{ marginTop: "max(0px, -15px)" }}>
               <button
                 type="submit"
-                style={{ width: "200px", height: "75px", marginBottom:"30px" }}
+                style={{ width: "200px", height: "75px", marginBottom:"20px" }}
                 className="w-full sm:w-auto bg-gray-900 hover:bg-gray-600  text-white font-bold rounded-lg transition uppercase text-sm tracking-wide whitespace-nowrap"
               >
                 ENVIAR
@@ -300,7 +300,7 @@ const ModalCita = ({ isOpen, onClose }) => {
         </form>
 
         {/* Footer */}
-        <p className="text-center text-gray-600 text-xs mt-6">
+        <p className="text-center text-gray-600 text-xs ">
           Nuestro equipo te contactará para coordinar día/hora de atención.
         </p>
       </div>
