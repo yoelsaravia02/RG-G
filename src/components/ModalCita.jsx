@@ -239,7 +239,7 @@ const ModalCita = ({ isOpen, onClose }) => {
             <div>
               <input
                 type="text"
-                placeholder="Teléfono"
+                placeholder="Teléfono (Opcional)"
                 {...register("telefono")}
                 className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
               />

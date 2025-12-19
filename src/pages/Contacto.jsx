@@ -169,9 +169,9 @@ const Contacto = () => {
                 <div>
                   {/* <h4 className="text-2xl font-semibold text-white mb-3 font-dm-serif">TELÉFONOS</h4> */}
                   <FaPhoneAlt className="text-3xl font-semibold text-white my-3"></FaPhoneAlt>
-                  <p className="text-white font-bold font-mona">(351) 155 8063677</p>
-                  <p className="text-white font-bold font-mona">(358) 155 4497250</p>
-                  <p className="text-white font-bold font-mona">(116) 155 4090255</p>
+                  <p className="text-white font-bold font-mona">+54 9 3518063677</p>
+                  <p className="text-white font-bold font-mona">+54 9 3584497250</p>
+                  <p className="text-white font-bold font-mona">+54 9 1164090255</p>
                 </div>
                 <div>
                   {/* <h4 className="text-2xl font-semibold text-white mb-3 font-dm-serif">E-MAILS</h4> */}
