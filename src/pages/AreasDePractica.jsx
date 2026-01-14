@@ -34,7 +34,7 @@ const areas = [
   {
     titulo: "Derecho Civil y Comercial - Contratación",
     descripcion:
-      "Redacción, análisis y negociación de contratos civiles y comerciales. Intervención in la ejecución, interpretación y resolución de obligaciones contractuales. Representación in conflictos derivados de relaciones jurídicas patrimoniales.",
+      "Redacción, análisis y negociación de contratos civiles y comerciales. Intervención en la ejecución, interpretación y resolución de obligaciones contractuales. Representación en conflictos derivados de relaciones jurídicas patrimoniales.",
   },
   {
     titulo: "Derecho de Seguros",
@@ -57,9 +57,16 @@ const areas = [
       "Elaboración y revisión de contratos financieros, cumplimiento normativo ante organismos de supervisión, estructuración de garantías y operaciones de crédito.",
   },
   {
-    titulo: "Derecho Ambiental",
+    titulo: "Divorcios",
     descripcion:
-      "Asesoría en cumplimiento de normativa ambiental, gestión de habilitaciones, intervención en procedimientos sancionatorios, redacción de informes legales y evaluación de impacto jurídico.",
+      <>
+        <p>
+          Asesoramos y acompañamos procesos de divorcio con un enfoque claro, responsable y humano, procurando soluciones que ordenen la situación patrimonial y familiar de las partes.
+        </p>
+        <p>
+          Intervenimos en divorcios de mutuo acuerdo y contenciosos, abordando la división de bienes, acuerdos parentales y aspectos económicos, priorizando previsibilidad, contención y seguridad jurídica.
+        </p>
+      </>
   },
   {
     titulo: "Derecho Administrativo",
@@ -76,6 +83,32 @@ const areas = [
     descripcion:
       "Intervención en procesos de reestructuración patrimonial, concursos preventivos, verificación de créditos, defensa de acreedores y asistencia a empresas en situación de cesación de pagos.",
   },
+  {
+    titulo: "Fideicomisos",
+    descripcion:
+      <>
+        <p>
+          Asesoramos y estructuramos fideicomisos como herramientas jurídicas para la organización, administración y protección de activos, tanto en el ámbito inmobiliario, financiero, empresarial y familiar.
+        </p>
+        <p>
+          Intervenimos en todas las etapas del fideicomiso: diseño legal, redacción contractual, ejecución, control y resolución de contingencias, priorizando seguridad jurídica, eficiencia patrimonial y previsibilidad para las partes involucradas.
+        </p>
+      </>,
+  },
+  {
+    titulo: "Litigios",
+    descripcion:
+      <>
+        <p>
+          Representamos a nuestros clientes en conflictos judiciales y extrajudiciales, con un enfoque estratégico y orientado a resultados.
+        </p>
+        <p>
+          Diseñamos y ejecutamos estrategias de litigación en materia civil, comercial y contractual, priorizando la defensa del interés del cliente, la eficiencia procesal y la resolución efectiva de cada caso.
+        </p>
+      </>,
+  },
+  
+
 ];
 
 // Divide el array en dos columnas
