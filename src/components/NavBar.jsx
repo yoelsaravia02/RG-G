@@ -73,90 +73,79 @@ const NavBar = ({ carouselRef }) => {
       <div className="max-w-screen-xl mx-auto flex flex-col items-center p-4">
         <div className="w-full flex justify-between items-center mb-2">
           {/* Logo */}
-          <a
-            href="javascript:void(0)"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-            onClick={e => {
-              e.preventDefault();
+          <button
+            className="flex items-center space-x-3 rtl:space-x-reverse bg-none border-none p-0 cursor-pointer"
+            onClick={() => {
               navigate("/");
               closeMenu();
             }}
+            aria-label="Ir a inicio"
           >
             <img src={`${process.env.PUBLIC_URL}/${isTransparent ? 'logoSantinoBlanco.png' : 'logoSantinoNegro.png'}`} className="h-10" style={{ height: '52px', width: 'auto' }} alt="Logo Santino" />
-          </a>
+          </button>
 
           {/* Menú principal (Enlaces) */}
           {/* Lógica: Si es vista móvil (<960px), se oculta ('hidden'). Si es escritorio, se muestra ('flex'). */}
           <ul className={`${isMobileView ? 'hidden' : 'flex'} space-x-8 font-medium items-center ${isTransparent ? 'text-white' : 'text-black'}`}>
             <li>
-              <a
-                href="javascript:void(0)"
-                className="font-mona transition-transform duration-200"
+              <button
+                className="font-mona transition-transform duration-200 bg-none border-none p-0 cursor-pointer"
                 style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                onClick={e => {
-                  e.preventDefault();
+                onClick={() => {
                   navigate("/");
                   window.scrollTo(0, 0);
                 }}
-              >Inicio</a>
+              >Inicio</button>
             </li>
             <li>
-              <a
-                href="javascript:void(0)"
-                className="font-mona transition-transform duration-200"
+              <button
+                className="font-mona transition-transform duration-200 bg-none border-none p-0 cursor-pointer"
                 style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                onClick={e => {
-                  e.preventDefault();
+                onClick={() => {
                   navigate("/firma");
                   window.scrollTo(0, 0);
                 }}
-              >Quienes Somos</a>
+              >Quienes Somos</button>
             </li>
             <li>
-              <a
-                href="javascript:void(0)"
-                className="font-mona transition-transform duration-200"
+              <button
+                className="font-mona transition-transform duration-200 bg-none border-none p-0 cursor-pointer"
                 style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                onClick={e => {
-                  e.preventDefault();
+                onClick={() => {
                   navigate("/areas");
                   window.scrollTo(0, 0);
                 }}
-              >Áreas de práctica</a>
+              >Áreas de práctica</button>
             </li>
             <li>
-              <a
-                href="javascript:void(0)"
-                className="font-mona transition-transform duration-200"
+              <button
+                className="font-mona transition-transform duration-200 bg-none border-none p-0 cursor-pointer"
                 style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                onClick={e => {
-                  e.preventDefault();
+                onClick={() => {
                   navigate("/profesionales");
                   window.scrollTo(0, 0);
                 }}
-              >Profesionales</a>
+              >Profesionales</button>
             </li>
             <li>
-              <a
-                href="javascript:void(0)"
-                className="font-mona transition-transform duration-200"
+              <button
+                className="font-mona transition-transform duration-200 bg-none border-none p-0 cursor-pointer"
                 style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                onClick={e => {
-                  e.preventDefault();
+                onClick={() => {
                   navigate("/contacto");
                   window.scrollTo(0, 0);
                 }}
-              >Contacto</a>
+              >Contacto</button>
             </li>
             {/* Separador */}
             <li style={{
@@ -207,6 +196,7 @@ const NavBar = ({ carouselRef }) => {
             <button
               className="text-gray-700 focus:outline-none"
               onClick={toggleMenu}
+              aria-label="Menú"
             >
               {isMobileMenuOpen ? (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -247,51 +237,41 @@ const NavBar = ({ carouselRef }) => {
           </button>
         </div>
         <div className="p-6 space-y-4 font-medium text-black">
-          <a
-            href="javascript:void(0)"
-            onClick={e => {
-              e.preventDefault();
+          <button
+            onClick={() => {
               navigate("/");
               closeMenu();
             }}
-            className="block hover:text-blue-700"
-          >Inicio</a>
-          <a
-            href="javascript:void(0)"
-            onClick={e => {
-              e.preventDefault();
+            className="block hover:text-blue-700 w-full text-left bg-none border-none p-0 cursor-pointer"
+          >Inicio</button>
+          <button
+            onClick={() => {
               navigate("/firma");
               closeMenu();
             }}
-            className="block hover:text-blue-700"
-          >Quienes Somos</a>
-          <a
-            href="javascript:void(0)"
-            onClick={e => {
-              e.preventDefault();
+            className="block hover:text-blue-700 w-full text-left bg-none border-none p-0 cursor-pointer"
+          >Quienes Somos</button>
+          <button
+            onClick={() => {
               navigate("/areas");
               closeMenu();
             }}
-            className="block hover:text-blue-700"
-          >Áreas de práctica</a>
-          <a
-            href="javascript:void(0)"
-            onClick={e => {
-              e.preventDefault();
+            className="block hover:text-blue-700 w-full text-left bg-none border-none p-0 cursor-pointer"
+          >Áreas de práctica</button>
+          <button
+            onClick={() => {
               navigate("/profesionales");
               closeMenu();
             }}
-            className="block hover:text-blue-700"
-          >Profesionales</a>
-          <a
-            href="javascript:void(0)"
-            onClick={e => {
-              e.preventDefault();
+            className="block hover:text-blue-700 w-full text-left bg-none border-none p-0 cursor-pointer"
+          >Profesionales</button>
+          <button
+            onClick={() => {
               navigate("/contacto");
               closeMenu();
             }}
-            className="block hover:text-blue-700"
-          >Contacto</a>
+            className="block hover:text-blue-700 w-full text-left bg-none border-none p-0 cursor-pointer"
+          >Contacto</button>
           <div className="border-t pt-4 mt-4 flex gap-4">
             <a
               href="https://www.linkedin.com/company/righetti-gandione-grounds/"
