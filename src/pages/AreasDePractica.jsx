@@ -32,7 +32,7 @@ const areas = [
       "Diseño de estructuras jurídicas orientadas a la protección, administración y transmisión de bienes familiares o empresariales. Implementación de vehículos jurídicos como fideicomisos, donaciones estructuradas, acuerdos sucesorios y otros instrumentos conforme al Código Civil y Comercial de la Nación.",
   },
   {
-    titulo: "Derecho Civil y Comercial - Contratación",
+    titulo: "Derecho Civil y Comercial",
     descripcion:
       "Redacción, análisis y negociación de contratos civiles y comerciales. Intervención en la ejecución, interpretación y resolución de obligaciones contractuales. Representación en conflictos derivados de relaciones jurídicas patrimoniales.",
   },
@@ -51,6 +51,13 @@ const areas = [
     descripcion:
       "Asesoramiento en procesos de compraventa de empresas, due diligence legal, diseño contractual y estructuración jurídica de operaciones societarias complejas.",
   },
+  {
+    titulo: "Amparos de Salud",
+    descripcion:
+      "Intervenimos en acciones de amparo destinadas a garantizar el acceso inmediato a tratamientos, medicamentos y prestaciones médicas frente a negativas o demoras de obras sociales, prepagas o el Estado.",
+  }
+  ,
+
   {
     titulo: "Derecho Bancario y Financiero",
     descripcion:
@@ -72,11 +79,6 @@ const areas = [
     titulo: "Derecho Administrativo",
     descripcion:
       "Representación en procedimientos administrativos, licitaciones públicas, contrataciones estatales, presentación de recursos y defensa en sede contencioso-administrativa.",
-  },
-  {
-    titulo: "Energía y Recursos Naturales",
-    descripcion:
-      "Asistencia jurídica a emprendimientos vinculados a hidrocarburos, energías renovables, gestión hídrica y explotación de recursos naturales. Evaluación normativa y acompañamiento en etapas de inversión y ejecución.",
   },
   {
     titulo: "Concursos y Quiebras",

@@ -28,6 +28,13 @@ const Contacto = () => {
   const captchaValue = watch("captcha");
   const mensajeValue = watch("mensaje", "");
 
+  // Configuración de estilos para la sección de contacto
+  const contactStyles = {
+    fontSize: "18px",         // Tamaño de la letra
+    iconSize: "30px",         // Tamaño de los logos
+    gap: "60px",              // Espaciado entre renglones
+  };
+
   const onSubmit = async (data) => {
     if (!captchaValue) {
       setShowCaptchaError(true);
@@ -129,6 +136,20 @@ const Contacto = () => {
   return (
     // SE AGREGÓ "overflow-x-hidden" AQUI ABAJO PARA EVITAR EL SCROLL HORIZONTAL
     <div className="bg-gray-50 overflow-x-hidden" style={{ marginBottom: "-1px", backgroundColor: "#161616ff" }}>
+      <style>
+        {`
+          .contact-responsive-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+          }
+          @media (min-width: 967px) {
+            .contact-responsive-grid {
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+        `}
+      </style>
       {/* Toast Container */}
       <ToastContainer
         position="bottom-left"
@@ -159,49 +180,33 @@ const Contacto = () => {
       {/* Mapa + Información */}
       <div className="w-full px-2 pt-8 pb-16 flex justify-center">
         <div className="w-full" style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div className="grid md:grid-cols-2 gap-2 items-start py-8 px-8 rounded-lg" style={{ background: "#363636ff"}}>
+          <div className="contact-responsive-grid items-start py-8 px-8 rounded-lg" style={{ background: "#363636ff"}}>
             {/* Información a la izquierda */}
             <div className="flex flex-col justify-center" data-aos="fade-right">
-              <h2 className="text-4xl font-serif font-bold text-gray-800 my-5 text-white font-bona">
-                NUESTRO ESTUDIO
+              <h2 className="text-4xl font-serif font-bold text-gray-800 my-5 text-white font-dm-serif">
+                CONTACTO
               </h2>
-              <div className="space-y-4">
-                <div>
-                  {/* <h4 className="text-2xl font-semibold text-white mb-3 font-dm-serif">TELÉFONOS</h4> */}
-                  <FaPhoneAlt className="text-3xl font-semibold text-white my-3"></FaPhoneAlt>
-                  <p className="text-white font-bold font-mona">+54 9 3518063677</p>
-                  <p className="text-white font-bold font-mona">+54 9 3584497250</p>
-                  <p className="text-white font-bold font-mona">+54 9 1164090255</p>
+              <div className="mt-6 pl-3" style={{ display: "flex", flexDirection: "column", gap: contactStyles.gap }}>
+                <div className="flex items-start" style={{ gap: contactStyles.gap }}>
+                  <FaPhoneAlt className="text-white flex-shrink-0 mt-1" style={{ fontSize: contactStyles.iconSize }}></FaPhoneAlt>
+                  <p className="text-white font-bold font-mona mt-1" style={{ fontSize: contactStyles.fontSize }}>+54 9 3513238562</p>
                 </div>
-                <div>
-                  {/* <h4 className="text-2xl font-semibold text-white mb-3 font-dm-serif">E-MAILS</h4> */}
-                  <IoMdMail className="text-3xl font-semibold text-white mb-3"></IoMdMail>
-                  <div className="flex flex-col">
-                    <a
-                      href="mailto:srighetti@righettigandionegrounds.com.ar"
-                      className="text-white hover:underline font-mona"
-                    >
-                      srighetti@righettigandionegrounds.com.ar
-                    </a>
-                    <a
-                      href="mailto:sgandione@righettigandionegrounds.com.ar"
-                      className="text-white hover:underline font-mona"
-                    >
-                      sgandione@righettigandionegrounds.com.ar
-                    </a>
-                    <a
-                      href="mailto:tgrounds@righettigandionegrounds.com.ar"
-                      className="text-white hover:underline font-mona"
-                    >
-                      tgrounds@righettigandionegrounds.com.ar
-                    </a>
+                <div className="flex items-start" style={{ gap: contactStyles.gap }}>
+                  <IoMdMail className="text-white flex-shrink-0 mt-1" style={{ fontSize: contactStyles.iconSize }}></IoMdMail>
+                  <a
+                    href="mailto:estudio@righettigandionegrounds.com.ar"
+                    className="text-white hover:underline font-mona mt-1"
+                    style={{ fontSize: contactStyles.fontSize }}
+                  >
+                    estudio@righettigandionegrounds.com.ar 
+                  </a>
+                </div>
+                <div className="flex items-start" style={{ gap: contactStyles.gap }}>
+                  <HiMapPin className="text-white flex-shrink-0 mt-1" style={{ fontSize: contactStyles.iconSize }}></HiMapPin>
+                  <div>
+                    <p className="text-white font-mona -mt-1" style={{ fontSize: contactStyles.fontSize }}>Obispo Oro 440</p>
+                    <p className="text-white font-mona" style={{ fontSize: contactStyles.fontSize }}>Córdoba, Argentina.</p>
                   </div>
-                </div>
-                <div>
-                  {/* <h4 className="text-2xl font-semibold text-white mb-3 font-dm-serif">DIRECCIÓN</h4> */}
-                  <HiMapPin className="text-3xl font-semibold text-white mb-3"></HiMapPin>
-                  <p className="text-white font-mona">Obispo Oro 440</p>
-                  <p className="text-white font-mona">Córdoba, Argentina.</p>
                 </div>
               </div>
             </div>
