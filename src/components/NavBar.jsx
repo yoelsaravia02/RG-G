@@ -74,7 +74,7 @@ const NavBar = ({ carouselRef }) => {
         <div className="w-full flex justify-between items-center mb-2">
           {/* Logo */}
           <a
-            href="#"
+            href="javascript:void(0)"
             className="flex items-center space-x-3 rtl:space-x-reverse"
             onClick={e => {
               e.preventDefault();
@@ -90,7 +90,7 @@ const NavBar = ({ carouselRef }) => {
           <ul className={`${isMobileView ? 'hidden' : 'flex'} space-x-8 font-medium items-center ${isTransparent ? 'text-white' : 'text-black'}`}>
             <li>
               <a
-                href="#"
+                href="javascript:void(0)"
                 className="font-mona transition-transform duration-200"
                 style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
@@ -104,7 +104,7 @@ const NavBar = ({ carouselRef }) => {
             </li>
             <li>
               <a
-                href="#"
+                href="javascript:void(0)"
                 className="font-mona transition-transform duration-200"
                 style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
@@ -118,7 +118,7 @@ const NavBar = ({ carouselRef }) => {
             </li>
             <li>
               <a
-                href="#"
+                href="javascript:void(0)"
                 className="font-mona transition-transform duration-200"
                 style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
@@ -132,7 +132,7 @@ const NavBar = ({ carouselRef }) => {
             </li>
             <li>
               <a
-                href="#"
+                href="javascript:void(0)"
                 className="font-mona transition-transform duration-200"
                 style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
@@ -146,7 +146,7 @@ const NavBar = ({ carouselRef }) => {
             </li>
             <li>
               <a
-                href="#"
+                href="javascript:void(0)"
                 className="font-mona transition-transform duration-200"
                 style={{ display: 'inline-block', transition: 'transform 0.2s', fontWeight: 400 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.15)'}
@@ -248,7 +248,7 @@ const NavBar = ({ carouselRef }) => {
         </div>
         <div className="p-6 space-y-4 font-medium text-black">
           <a
-            href="#"
+            href="javascript:void(0)"
             onClick={e => {
               e.preventDefault();
               navigate("/");
@@ -257,7 +257,7 @@ const NavBar = ({ carouselRef }) => {
             className="block hover:text-blue-700"
           >Inicio</a>
           <a
-            href="#"
+            href="javascript:void(0)"
             onClick={e => {
               e.preventDefault();
               navigate("/firma");
@@ -266,7 +266,7 @@ const NavBar = ({ carouselRef }) => {
             className="block hover:text-blue-700"
           >Quienes Somos</a>
           <a
-            href="#"
+            href="javascript:void(0)"
             onClick={e => {
               e.preventDefault();
               navigate("/areas");
@@ -275,7 +275,7 @@ const NavBar = ({ carouselRef }) => {
             className="block hover:text-blue-700"
           >Áreas de práctica</a>
           <a
-            href="#"
+            href="javascript:void(0)"
             onClick={e => {
               e.preventDefault();
               navigate("/profesionales");
@@ -284,7 +284,7 @@ const NavBar = ({ carouselRef }) => {
             className="block hover:text-blue-700"
           >Profesionales</a>
           <a
-            href="#"
+            href="javascript:void(0)"
             onClick={e => {
               e.preventDefault();
               navigate("/contacto");

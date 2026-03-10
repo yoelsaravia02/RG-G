@@ -82,7 +82,9 @@ const Contacto = () => {
       .catch((err) => {
         // Normalizar abort error a mensaje legible
         if (err && err.name === "AbortError") {
-          throw { message: "Timeout: la petición tardó demasiado" };
+          const timeoutError = new Error("Timeout: la petición tardó demasiado");
+          timeoutError.message = "Timeout: la petición tardó demasiado";
+          throw timeoutError;
         }
         // re-lanzar objeto/ Error para que toast.promise lo trate en error.render
         throw err;
