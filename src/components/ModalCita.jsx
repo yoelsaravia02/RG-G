@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import ReCAPTCHA from "react-google-recaptcha";
 import { toast, Slide } from "react-toastify";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const ModalCita = ({ isOpen, onClose }) => {
   // Propiedades del modal (modifica aquí)
@@ -31,7 +29,11 @@ const ModalCita = ({ isOpen, onClose }) => {
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape" && isOpen && !isClosing) {
-        handleClose();
+        setIsClosing(true);
+        setTimeout(() => {
+          onClose();
+          setIsClosing(false);
+        }, 800);
       }
     };
 
@@ -94,7 +96,9 @@ const ModalCita = ({ isOpen, onClose }) => {
       })
       .catch((err) => {
         if (err && err.name === "AbortError") {
-          throw { message: "Timeout: la petición tardó demasiado" };
+          const timeoutError = new Error("Timeout: la petición tardó demasiado");
+          timeoutError.message = "Timeout: la petición tardó demasiado";
+          throw timeoutError;
         }
         throw err;
       });
