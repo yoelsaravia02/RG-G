@@ -167,8 +167,8 @@ const Contacto = () => {
           }
           @media (max-width: 480px) {
             .contact-responsive-grid .info-text {
-              font-size: 15px;
-              margin-left: -25px;
+              font-size: 12px;
+              margin-left: -30px;
             }
               .prueba {
                 padding-left: 20px;
