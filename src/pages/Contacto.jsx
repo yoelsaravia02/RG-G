@@ -167,7 +167,7 @@ const Contacto = () => {
           }
           @media (max-width: 480px) {
             .contact-responsive-grid .info-text {
-              font-size: 12px;
+              font-size: 14px;
               margin-left: -30px;
             }
               .prueba {
