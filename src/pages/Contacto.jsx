@@ -144,10 +144,76 @@ const Contacto = () => {
             display: grid;
             grid-template-columns: 1fr;
             gap: 8px;
+            padding: 20px 12px;
+            overflow: hidden;
+          }
+          .contact-responsive-grid .map-container {
+            height: 250px;
+            width: 100%;
+            overflow: hidden;
+          }
+          .contact-responsive-grid .info-icon {
+            font-size: 20px;
+            min-width: 20px;
+          }
+          .contact-responsive-grid .info-text {
+            font-size: 18px;
+          }
+          .contact-responsive-grid .contact-title {
+            font-size: 28px;
+          }
+          .contact-responsive-grid .info-gap {
+            gap: 16px;
+          }
+          @media (max-width: 480px) {
+            .contact-responsive-grid .info-text {
+              font-size: 15px;
+            }
+              .prueba {
+                padding-left: 20px
+              }
+          }
+          @media (min-width: 520px) {
+            .contact-responsive-grid {
+              height: auto;
+            }
+            .contact-responsive-grid .map-container {
+              height: 300px;
+            }
+            .contact-responsive-grid .info-text {
+              font-size: 18px;
+            }
+            .contact-responsive-grid .info-icon {
+              font-size: 24px;
+              min-width: 24px;
+            }
+            .contact-responsive-grid .contact-title {
+              font-size: 38px;
+            }
+            .contact-responsive-grid .info-gap {
+              gap: 20px;
+            }
           }
           @media (min-width: 967px) {
             .contact-responsive-grid {
               grid-template-columns: repeat(2, 1fr);
+              padding: 32px 32px;
+            }
+            .contact-responsive-grid .map-container {
+              height: 450px;
+            }
+            .contact-responsive-grid .info-text {
+              font-size: 18px;
+            }
+            .contact-responsive-grid .info-icon {
+              font-size: 30px;
+              min-width: 30px;
+            }
+            .contact-responsive-grid .contact-title {
+              font-size: 36px;
+            }
+            .contact-responsive-grid .info-gap {
+              gap: 60px;
             }
           }
         `}
@@ -185,20 +251,19 @@ const Contacto = () => {
           <div className="contact-responsive-grid items-start py-8 px-8 rounded-lg" style={{ background: "#363636ff"}}>
             {/* Información a la izquierda */}
             <div className="flex flex-col justify-center" data-aos="fade-right">
-              <h2 className="text-4xl font-serif font-bold text-gray-800 my-5 text-white font-dm-serif">
+              <h2 className="text-4xl font-serif font-bold text-gray-800 my-5 text-white font-dm-serif prueba">
                 CONTACTO
               </h2>
               <div className="mt-6 pl-3" style={{ display: "flex", flexDirection: "column", gap: contactStyles.gap }}>
                 <div className="flex items-start" style={{ gap: contactStyles.gap }}>
                   <FaPhoneAlt className="text-white flex-shrink-0 mt-1" style={{ fontSize: contactStyles.iconSize }}></FaPhoneAlt>
-                  <p className="text-white font-bold font-mona mt-1" style={{ fontSize: contactStyles.fontSize }}>+54 9 3513238562</p>
+                  <p className="text-white font-bold font-mona mt-1 info-text">+54 9 3513238562</p>
                 </div>
                 <div className="flex items-start" style={{ gap: contactStyles.gap }}>
                   <IoMdMail className="text-white flex-shrink-0 mt-1" style={{ fontSize: contactStyles.iconSize }}></IoMdMail>
                   <a
                     href="mailto:estudio@righettigandionegrounds.com.ar"
-                    className="text-white hover:underline font-mona mt-1"
-                    style={{ fontSize: contactStyles.fontSize }}
+                    className="text-white hover:underline font-mona mt-1 info-text"
                   >
                     estudio@righettigandionegrounds.com.ar 
                   </a>
@@ -206,8 +271,8 @@ const Contacto = () => {
                 <div className="flex items-start" style={{ gap: contactStyles.gap }}>
                   <HiMapPin className="text-white flex-shrink-0 mt-1" style={{ fontSize: contactStyles.iconSize }}></HiMapPin>
                   <div>
-                    <p className="text-white font-mona -mt-1" style={{ fontSize: contactStyles.fontSize }}>Obispo Oro 440</p>
-                    <p className="text-white font-mona" style={{ fontSize: contactStyles.fontSize }}>Córdoba, Argentina.</p>
+                    <p className="text-white font-mona -mt-1 info-text">Obispo Oro 440</p>
+                    <p className="text-white font-mona mb-5 info-text">Córdoba, Argentina.</p>
                   </div>
                 </div>
               </div>
