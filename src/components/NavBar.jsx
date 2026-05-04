@@ -168,7 +168,7 @@ const NavBar = ({ carouselRef }) => {
             </li>
             <li>
               <a
-                href="https://wa.me/5493518063677"
+                href="https://wa.me/5493513238562"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-transform duration-200 hover:scale-125"
