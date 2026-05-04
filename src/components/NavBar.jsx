@@ -283,7 +283,7 @@ const NavBar = ({ carouselRef }) => {
               <FaLinkedin size={24} />
             </a>
             <a
-              href="https://wa.me/5493518063677"
+              href="https://wa.me/5493513238562"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-green-500"
