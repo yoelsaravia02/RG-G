@@ -64,9 +64,11 @@ const LaFirma = () => {
 
           {/* 2. Imagen */}
           <div className="flex justify-center w-full" data-aos="fade-left">
-            <img
-              src={`${process.env.PUBLIC_URL}/imagen-QS1.png`}
-              alt="RG&G Bureau Legal Team"
+            <video
+              src={`${process.env.PUBLIC_URL}/video-prueba.mp4`}
+              autoPlay
+              loop
+              muted
               className="rounded-lg shadow-lg"
               style={{ 
                 marginTop: "20px", 
