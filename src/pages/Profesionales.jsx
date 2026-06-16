@@ -14,6 +14,7 @@ const cards = [
     mailLink: "mailto:srighetti@righettigandionegrounds.com.ar",
     linkedinLink: "https://www.linkedin.com/in/santino-righetti-sagrera-a4854b189/",
     whatsapp: "+5493518063677",
+    mp: "Mat. Prov. 1-45014 | Mat. Fed. Tº713 Fº18"
   },
   {
     img: `${process.env.PUBLIC_URL}/22fotoGandione.png`,
@@ -23,6 +24,7 @@ const cards = [
     mailLink: "mailto:sgandione@righettigandionegrounds.com.ar",
     linkedinLink: "https://www.linkedin.com/in/santiago-gandione-79b261306/",
     whatsapp: "+5493584497250",
+    mp: "Mat. Prov. 1-45030 | Mat. Fed. Tº713 Fº15"
   },
   {
     img: `${process.env.PUBLIC_URL}/22fotoGrounds.png`,
@@ -32,6 +34,7 @@ const cards = [
     mailLink: "mailto:tgrounds@righettigandionegrounds.com.ar",
     linkedinLink: "https://www.linkedin.com/in/trinidad-grounds-19714a248/",
     whatsapp: "+5491164090255",
+    mp: "Mat. Prov. 1-45088 | Mat. Fed. Tº713 Fº67"
   },
 ];
 
@@ -81,8 +84,13 @@ const Profesionales = () => {
               </h3>
 
               {/* Puesto */}
-              <p className="text-gray-400 text-sm sm:text-md mb-4 font-mona px-2">
+              <p className="text-gray-400 text-lg sm:text-md mb-2 font-mona px-2">
                 {card.puesto}
+              </p>
+
+              {/* Matricula */}
+              <p className="text-gray-400 text-md sm:text-md mb-4 font-mona px-2">
+                {card.mp}
               </p>
 
               {/* Iconos Mail, WhatsApp y LinkedIn */}
