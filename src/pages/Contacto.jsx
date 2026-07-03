@@ -272,7 +272,7 @@ const Contacto = () => {
                 <div className="flex items-start" style={{ gap: contactStyles.gap }}>
                   <HiMapPin className="text-white flex-shrink-0 mt-1" style={{ fontSize: contactStyles.iconSize }}></HiMapPin>
                   <div>
-                    <p className="text-white font-mona -mt-1 info-text">Obispo Oro 440</p>
+                    <p className="text-white font-mona -mt-1 info-text">Av. Poeta Leopoldo Lugones 344</p>
                     <p className="text-white font-mona mb-5 info-text">Córdoba, Argentina.</p>
                   </div>
                 </div>
@@ -282,7 +282,7 @@ const Contacto = () => {
             {/* Mapa a la derecha */}
             <div className="flex justify-center items-center" style={{ height: "450px" }} data-aos="fade-left">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.5579170220158!2d-64.1817645!3d-31.4263041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a291bfb45281%3A0xb92e36e580615ad5!2sObispo%20Oro%20444%2C%20X5000BFJ%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1757603644358!5m2!1ses!2sar"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.5337320117524!2d-64.1818591!3d-31.426970199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a291ecca4a4f%3A0xc86c816d7eb4288b!2sAv.%20Poeta%20Leopoldo%20Lugones%20344%2C%20X5000IIF%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1783042014824!5m2!1ses!2sar"
                 width="100%"
                 height="100%"
                 style={{ border: 0, borderRadius: "12px" }}
