@@ -368,7 +368,7 @@ const Contacto = () => {
                 </div>
               </div>
 
-              {/* <div className="mb-4">
+              <div className="mb-4">
                 <ReCAPTCHA
                   sitekey={RECAPTCHA_SITE_KEY}
                   onChange={onCaptchaChange}
@@ -380,7 +380,7 @@ const Contacto = () => {
                     Debes completar el reCAPTCHA
                   </span>
                 )}
-              </div> */}
+              </div>
 
               <button
                 type="submit"
