@@ -11,7 +11,7 @@ const Footer = () => {
         {/* Columna izquierda: Logo y redes */}
         <div className="flex flex-col items-center gap-4 mb-6 md:mb-0">
           <img
-            src={`${process.env.PUBLIC_URL}/1logoFooter-p.png`}
+            src={`${process.env.PUBLIC_URL}/1.1logoFooter-p.png`}
             alt="Logo Footer"
             className="mb-4"
             style={{ width: "320px", height: "auto" }}
@@ -177,8 +177,7 @@ const Footer = () => {
         style={{ fontSize: "0.85rem" }}
       >
         <p className="text-white">
-          RIGHETTI GANDIONE & GROUNDS BUREAU LEGAL. Todos los derechos reservados. Prohibida su
-          reproducción total o parcial.
+          RIGHETTI GANDIONE BUREAU LEGAL. Todos los derechos reservados. Prohibida su reproducción total o parcial.
         </p>
       </div>
     </footer>

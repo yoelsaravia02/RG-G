@@ -26,16 +26,16 @@ const cards = [
     whatsapp: "+5493584497250",
     mp: "Mat. Prov. 1-45030 | Mat. Fed. Tº713 Fº15"
   },
-  {
-    img: `${process.env.PUBLIC_URL}/22fotoGrounds.png`,
-    title: "Trinidad Carolina Grounds",
-    puesto: "Socia Fundadora",
-    mail: "tgrounds@righettigandionegrounds.com.ar",
-    mailLink: "mailto:tgrounds@righettigandionegrounds.com.ar",
-    linkedinLink: "https://www.linkedin.com/in/trinidad-grounds-19714a248/",
-    whatsapp: "+5491164090255",
-    mp: "Mat. Prov. 1-45088 | Mat. Fed. Tº713 Fº67"
-  },
+  // {
+  //   img: `${process.env.PUBLIC_URL}/22fotoGrounds.png`,
+  //   title: "Trinidad Carolina Grounds",
+  //   puesto: "Socia Fundadora",
+  //   mail: "tgrounds@righettigandionegrounds.com.ar",
+  //   mailLink: "mailto:tgrounds@righettigandionegrounds.com.ar",
+  //   linkedinLink: "https://www.linkedin.com/in/trinidad-grounds-19714a248/",
+  //   whatsapp: "+5491164090255",
+  //   mp: "Mat. Prov. 1-45088 | Mat. Fed. Tº713 Fº67"
+  // },
 ];
 
 const Profesionales = () => {
@@ -61,7 +61,7 @@ const Profesionales = () => {
       </div>
 
       <div style={{ marginTop: "30px" }} className="py-8 max-w-full mx-auto mb-12 px-4 sm:px-8 md:px-12 lg:px-16 flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 w-full max-w-7xl">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12 w-full max-w-7xl">
           {cards.map((card, idx) => (
             <div 
               key={idx} 

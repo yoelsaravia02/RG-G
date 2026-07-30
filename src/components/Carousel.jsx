@@ -82,7 +82,7 @@ const Carousel = () => {
                   }
                 }
               `}</style>
-              Righetti Gandione & Grounds
+              Righetti Gandione
             </span>
           </h1>
           <h1

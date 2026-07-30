@@ -81,7 +81,7 @@ const NavBar = ({ carouselRef }) => {
             }}
             aria-label="Ir a inicio"
           >
-            <img src={`${process.env.PUBLIC_URL}/${isTransparent ? 'logoSantinoBlanco.png' : 'logoSantinoNegro.png'}`} className="h-10" style={{ height: '52px', width: 'auto' }} alt="Logo Santino" />
+            <img src={`${process.env.PUBLIC_URL}/${isTransparent ? 'logoSantinoBlanco1.png' : 'logoSantinoNegro1.png'}`} className="h-10" style={{ height: '52px', width: 'auto' }} alt="Logo Santino" />
           </button>
 
           {/* Menú principal (Enlaces) */}
@@ -157,7 +157,7 @@ const NavBar = ({ carouselRef }) => {
             {/* Redes Sociales */}
             <li>
               <a
-                href="https://www.linkedin.com/company/righetti-gandione-grounds/"
+                href="https://www.linkedin.com/company/righetti-gandione"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-transform duration-200 hover:scale-125"
@@ -179,7 +179,7 @@ const NavBar = ({ carouselRef }) => {
             </li>
             <li>
               <a
-                href="https://www.instagram.com/righettigandionegrounds"
+                href="https://www.instagram.com/righettigandione/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-transform duration-200 hover:scale-125"
@@ -274,7 +274,7 @@ const NavBar = ({ carouselRef }) => {
           >Contacto</button>
           <div className="border-t pt-4 mt-4 flex gap-4">
             <a
-              href="https://www.linkedin.com/company/righetti-gandione-grounds/"
+              href="https://www.linkedin.com/company/righetti-gandione"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-700"
@@ -293,7 +293,7 @@ const NavBar = ({ carouselRef }) => {
             </a>
 
             <a
-              href="https://www.instagram.com/righettigandionegrounds"
+              href="https://www.instagram.com/righettigandione/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-green-500"
