@@ -258,15 +258,15 @@ const Contacto = () => {
               <div className="mt-6 pl-3" style={{ display: "flex", flexDirection: "column", gap: contactStyles.gap }}>
                 <div className="flex items-start" style={{ gap: contactStyles.gap }}>
                   <FaPhoneAlt className="text-white flex-shrink-0 mt-1" style={{ fontSize: contactStyles.iconSize }}></FaPhoneAlt>
-                  <p className="text-white font-bold font-mona mt-1 info-text">+54 9 3513238562</p>
+                  <p className="text-white font-bold font-mona mt-1 info-text">+54 9 3517584697</p>
                 </div>
                 <div className="flex items-start" style={{ gap: contactStyles.gap }}>
                   <IoMdMail className="text-white flex-shrink-0 mt-1" style={{ fontSize: contactStyles.iconSize }}></IoMdMail>
                   <a
-                    href="mailto:estudio@righettigandionegrounds.com.ar"
+                    href="mailto:estudio@righettigandione.com.ar"
                     className="text-white hover:underline font-mona mt-1 info-text"
                   >
-                    estudio@righettigandionegrounds.com.ar 
+                    estudio@righettigandione.com.ar 
                   </a>
                 </div>
                 <div className="flex items-start" style={{ gap: contactStyles.gap }}>
@@ -368,7 +368,7 @@ const Contacto = () => {
                 </div>
               </div>
 
-              <div className="mb-4">
+              {/* <div className="mb-4">
                 <ReCAPTCHA
                   sitekey={RECAPTCHA_SITE_KEY}
                   onChange={onCaptchaChange}
@@ -380,7 +380,7 @@ const Contacto = () => {
                     Debes completar el reCAPTCHA
                   </span>
                 )}
-              </div>
+              </div> */}
 
               <button
                 type="submit"

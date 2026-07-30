@@ -19,12 +19,12 @@ function App() {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         {/* SEO global por defecto */}
         <Helmet>
-          <title>Righetti Gandione & Grounds - Bureau Legal</title>
+          <title>Righetti & Gandione - Bureau Legal</title>
           <meta
             name="description"
             content="Firma jurídica. Brindamos soluciones legales estratégicas en Córdoba y Argentina."
           />
-          <link rel="canonical" href="https://righettigandionegrounds.com.ar/" />
+          <link rel="canonical" href="https://righettigandione.com.ar/" />
         </Helmet>
 
         <NavBar fading={fading} />
@@ -38,14 +38,14 @@ function App() {
             element={
               <>
                 <Helmet>
-                  <title>Righetti Gandione & Grounds - Bureau Legal</title>
+                  <title>Righetti & Gandione - Bureau Legal</title>
                   <meta
                     name="description"
                     content="Firma jurídica. Brindamos soluciones legales estratégicas en Córdoba y Argentina."
                   />
                   <link
                     rel="canonical"
-                    href="https://righettigandionegrounds.com.ar/"
+                    href="https://righettigandione.com.ar/"
                   />
                 </Helmet>
                 <HomePage setFading={setFading} />
@@ -59,14 +59,14 @@ function App() {
             element={
               <>
                 <Helmet>
-                  <title>La Firma - RG & G</title>
+                  <title>La Firma - R & G</title>
                   <meta
                     name="description"
-                    content="Conocé la trayectoria, valores y profesionales detrás de Righetti Gandione & Grounds. Experiencia en el ámbito jurídico nacional e internacional."
+                    content="Conocé la trayectoria, valores y profesionales detrás de Righetti & Gandione. Experiencia en el ámbito jurídico nacional e internacional."
                   />
                   <link
                     rel="canonical"
-                    href="https://righettigandionegrounds.com.ar/firma"
+                    href="https://righettigandione.com.ar/firma"
                   />
                 </Helmet>
                 <LaFirma />
@@ -80,14 +80,14 @@ function App() {
             element={
               <>
                 <Helmet>
-                  <title>Áreas de Práctica - RG & G</title>
+                  <title>Áreas de Práctica - R & G</title>
                   <meta
                     name="description"
                     content="Derecho societario, minero, civil y comercial, ambiental, bancario, M&A, seguros, propiedad intelectual y más."
                   />
                   <link
                     rel="canonical"
-                    href="https://righettigandionegrounds.com.ar/areas"
+                    href="https://righettigandione.com.ar/areas"
                   />
                 </Helmet>
                 <AreasDePractica />
@@ -101,14 +101,14 @@ function App() {
             element={
               <>
                 <Helmet>
-                  <title>Profesionales - RG & G</title>
+                  <title>Profesionales - R & G</title>
                   <meta
                     name="description"
-                    content="Conocé al equipo de abogados y especialistas que conforman Righetti Gandione & Grounds. Comprometidos con brindar asesoramiento jurídico integral."
+                    content="Conocé al equipo de abogados y especialistas que conforman Righetti & Gandione. Comprometidos con brindar asesoramiento jurídico integral."
                   />
                   <link
                     rel="canonical"
-                    href="https://righettigandionegrounds.com.ar/profesionales"
+                    href="https://righettigandione.com.ar/profesionales"
                   />
                 </Helmet>
                 <Profesionales />
@@ -125,11 +125,11 @@ function App() {
                   <title>Contacto - RG & G</title>
                   <meta
                     name="description"
-                    content="Contactá con Righetti Gandione & Grounds. Asesoramiento legal en Córdoba y Argentina."
+                    content="Contactá con Righetti & Gandione. Asesoramiento legal en Córdoba y Argentina."
                   />
                   <link
                     rel="canonical"
-                    href="https://righettigandionegrounds.com.ar/contacto"
+                    href="https://righettigandione.com.ar/contacto"
                   />
                 </Helmet>
                 <Contacto />
