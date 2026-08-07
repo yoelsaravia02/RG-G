@@ -10,8 +10,8 @@ const cards = [
     img: `${process.env.PUBLIC_URL}/22fotoSantino.png`,
     title: "Santino Righetti Sagrera",
     puesto: "Socio Fundador",
-    mail: "srighetti@righettigandionegrounds.com.ar",
-    mailLink: "mailto:srighetti@righettigandionegrounds.com.ar",
+    mail: "srighetti@righettigandione.com.ar",
+    mailLink: "mailto:srighetti@righettigandione.com.ar",
     linkedinLink: "https://www.linkedin.com/in/santino-righetti-sagrera-a4854b189/",
     whatsapp: "+5493518063677",
     mp: "Mat. Prov. 1-45014 | Mat. Fed. Tº713 Fº18"
@@ -20,8 +20,8 @@ const cards = [
     img: `${process.env.PUBLIC_URL}/22fotoGandione.png`,
     title: "Santiago Gandione",
     puesto: "Socio Fundador",
-    mail: "sgandione@righettigandionegrounds.com.ar",
-    mailLink: "mailto:sgandione@righettigandionegrounds.com.ar",
+    mail: "sgandione@righettigandione.com.ar",
+    mailLink: "mailto:sgandione@righettigandione.com.ar",
     linkedinLink: "https://www.linkedin.com/in/santiago-gandione-79b261306/",
     whatsapp: "+5493584497250",
     mp: "Mat. Prov. 1-45030 | Mat. Fed. Tº713 Fº15"

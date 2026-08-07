@@ -168,7 +168,7 @@ const NavBar = ({ carouselRef }) => {
             </li>
             <li>
               <a
-                href="https://wa.me/5493513238562"
+                href="https://wa.me/5493517584697"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-transform duration-200 hover:scale-125"
@@ -283,7 +283,7 @@ const NavBar = ({ carouselRef }) => {
               <FaLinkedin size={24} />
             </a>
             <a
-              href="https://wa.me/5493513238562"
+              href="https://wa.me/5493517584697"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-green-500"
