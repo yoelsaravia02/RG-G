@@ -10,10 +10,10 @@ const HomePage = ({ setFading }) => (
       <div className="flex-1 relative">
         <Carousel setFading={setFading} />
         <ShapeDivider />
+        <ContactoHP />
       </div>
     </div>
     {/* <Novedades /> */}
-    <ContactoHP/>
   </div>
 );
 

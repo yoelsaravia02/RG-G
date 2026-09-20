@@ -7,12 +7,13 @@ const ContactoHP = () => {
   return (
     <>
       <div
-        data-aos="fade-up" data-aos-duration="800"
-        className="rounded-2xl px-4 md:px-8 lg:px-16 text-center"
+        className="absolute z-20 px-4 text-center"
         style={{
-          backgroundColor: "#161616ff",
-          paddingTop:"100px",
-          paddingBottom:"50px"
+          bottom: "calc(16% + 40px)",
+          left: 0,
+          right: 0,
+          display: "flex",
+          justifyContent: "center"
         }}
       >
         <button
